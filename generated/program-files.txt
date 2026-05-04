@@ -1,0 +1,62 @@
+/var/folders/5q/yhcyv3z55wvg6lhgc3h22kk00000gq/T/20240209-1/replication-package/NCP Replication Packet/Analysis/Build/Clean-MTurk.do
+/var/folders/5q/yhcyv3z55wvg6lhgc3h22kk00000gq/T/20240209-1/replication-package/NCP Replication Packet/Analysis/Build/Clean-Raw.do
+/var/folders/5q/yhcyv3z55wvg6lhgc3h22kk00000gq/T/20240209-1/replication-package/NCP Replication Packet/Analysis/Build/Clean-cs.do
+/var/folders/5q/yhcyv3z55wvg6lhgc3h22kk00000gq/T/20240209-1/replication-package/NCP Replication Packet/Analysis/Build/Clean-exante.do
+/var/folders/5q/yhcyv3z55wvg6lhgc3h22kk00000gq/T/20240209-1/replication-package/NCP Replication Packet/Analysis/Build/Clean-main.do
+/var/folders/5q/yhcyv3z55wvg6lhgc3h22kk00000gq/T/20240209-1/replication-package/NCP Replication Packet/Analysis/Build/Clean-pf.do
+/var/folders/5q/yhcyv3z55wvg6lhgc3h22kk00000gq/T/20240209-1/replication-package/NCP Replication Packet/Analysis/Code/0-Master.do
+/var/folders/5q/yhcyv3z55wvg6lhgc3h22kk00000gq/T/20240209-1/replication-package/NCP Replication Packet/Analysis/Code/0a-Programs-and-Macros.do
+/var/folders/5q/yhcyv3z55wvg6lhgc3h22kk00000gq/T/20240209-1/replication-package/NCP Replication Packet/Analysis/Code/1-Summary-Statistics.do
+/var/folders/5q/yhcyv3z55wvg6lhgc3h22kk00000gq/T/20240209-1/replication-package/NCP Replication Packet/Analysis/Code/2-Analysis.do
+/var/folders/5q/yhcyv3z55wvg6lhgc3h22kk00000gq/T/20240209-1/replication-package/NCP Replication Packet/Analysis/Code/3-Robustness.do
+/var/folders/5q/yhcyv3z55wvg6lhgc3h22kk00000gq/T/20240209-1/replication-package/NCP Replication Packet/Analysis/Code/4-All-Welfare-Analysis-Bootstrap-CombinedHS.do
+/var/folders/5q/yhcyv3z55wvg6lhgc3h22kk00000gq/T/20240209-1/replication-package/NCP Replication Packet/Analysis/Code/5-Compare-DG-utilities.do
+/var/folders/5q/yhcyv3z55wvg6lhgc3h22kk00000gq/T/20240209-1/replication-package/NCP Replication Packet/Analysis/Code/6-Stability-DG-Weights.do
+/var/folders/5q/yhcyv3z55wvg6lhgc3h22kk00000gq/T/20240209-1/replication-package/NCP Replication Packet/Analysis/Code/7-Stability-DG-Weights-2.do
+/var/folders/5q/yhcyv3z55wvg6lhgc3h22kk00000gq/T/20240209-1/replication-package/NCP Replication Packet/Analysis/Code/AI-flag-Survey1.do
+/var/folders/5q/yhcyv3z55wvg6lhgc3h22kk00000gq/T/20240209-1/replication-package/NCP Replication Packet/Analysis/Code/AI-flag-Survey2.do
+/var/folders/5q/yhcyv3z55wvg6lhgc3h22kk00000gq/T/20240209-1/replication-package/NCP Replication Packet/Analysis/Code/Heterogeneous-MU.do
+/var/folders/5q/yhcyv3z55wvg6lhgc3h22kk00000gq/T/20240209-1/replication-package/NCP Replication Packet/Analysis/Code/Supplementary Survey 1 Analysis.do
+/var/folders/5q/yhcyv3z55wvg6lhgc3h22kk00000gq/T/20240209-1/replication-package/NCP Replication Packet/Analysis/Code/Supplementary Survey 2 Analysis.do
+/var/folders/5q/yhcyv3z55wvg6lhgc3h22kk00000gq/T/20240209-1/replication-package/NCP Replication Packet/Analysis/Code/Supplementary Survey 3 Analysis.do
+/var/folders/5q/yhcyv3z55wvg6lhgc3h22kk00000gq/T/20240209-1/replication-package/NCP Replication Packet/Analysis/Code/Welfare-values.do
+/var/folders/5q/yhcyv3z55wvg6lhgc3h22kk00000gq/T/20240209-1/replication-package/NCP Replication Packet/Analysis/Code/X_DG-vs-OO-Weights.do
+/var/folders/5q/yhcyv3z55wvg6lhgc3h22kk00000gq/T/20240209-1/replication-package/NCP Replication Packet/Analysis/Code/X_IV-test-for-happiness-satisfaction.do
+/var/folders/5q/yhcyv3z55wvg6lhgc3h22kk00000gq/T/20240209-1/replication-package/NCP Replication Packet/Analysis/Code/X_Order-effects.do
+/var/folders/5q/yhcyv3z55wvg6lhgc3h22kk00000gq/T/20240209-1/replication-package/NCP Replication Packet/Analysis/Code/X_PCA.do
+/var/folders/5q/yhcyv3z55wvg6lhgc3h22kk00000gq/T/20240209-1/replication-package/NCP Replication Packet/Analysis/Code/X_Test-OVB.do
+/var/folders/5q/yhcyv3z55wvg6lhgc3h22kk00000gq/T/20240209-1/replication-package/NCP Replication Packet/Analysis/Code/comp_OO_CC.do
+/var/folders/5q/yhcyv3z55wvg6lhgc3h22kk00000gq/T/20240209-1/replication-package/__MACOSX/NCP Replication Packet/Analysis/Build/._Clean-MTurk.do
+/var/folders/5q/yhcyv3z55wvg6lhgc3h22kk00000gq/T/20240209-1/replication-package/__MACOSX/NCP Replication Packet/Analysis/Build/._Clean-Raw.do
+/var/folders/5q/yhcyv3z55wvg6lhgc3h22kk00000gq/T/20240209-1/replication-package/__MACOSX/NCP Replication Packet/Analysis/Build/._Clean-cs.do
+/var/folders/5q/yhcyv3z55wvg6lhgc3h22kk00000gq/T/20240209-1/replication-package/__MACOSX/NCP Replication Packet/Analysis/Build/._Clean-exante.do
+/var/folders/5q/yhcyv3z55wvg6lhgc3h22kk00000gq/T/20240209-1/replication-package/__MACOSX/NCP Replication Packet/Analysis/Build/._Clean-main.do
+/var/folders/5q/yhcyv3z55wvg6lhgc3h22kk00000gq/T/20240209-1/replication-package/__MACOSX/NCP Replication Packet/Analysis/Build/._Clean-pf.do
+/var/folders/5q/yhcyv3z55wvg6lhgc3h22kk00000gq/T/20240209-1/replication-package/__MACOSX/NCP Replication Packet/Analysis/Code/._0-Master.do
+/var/folders/5q/yhcyv3z55wvg6lhgc3h22kk00000gq/T/20240209-1/replication-package/__MACOSX/NCP Replication Packet/Analysis/Code/._0a-Programs-and-Macros.do
+/var/folders/5q/yhcyv3z55wvg6lhgc3h22kk00000gq/T/20240209-1/replication-package/__MACOSX/NCP Replication Packet/Analysis/Code/._1-Summary-Statistics.do
+/var/folders/5q/yhcyv3z55wvg6lhgc3h22kk00000gq/T/20240209-1/replication-package/__MACOSX/NCP Replication Packet/Analysis/Code/._2-Analysis.do
+/var/folders/5q/yhcyv3z55wvg6lhgc3h22kk00000gq/T/20240209-1/replication-package/__MACOSX/NCP Replication Packet/Analysis/Code/._3-Robustness.do
+/var/folders/5q/yhcyv3z55wvg6lhgc3h22kk00000gq/T/20240209-1/replication-package/__MACOSX/NCP Replication Packet/Analysis/Code/._4-All-Welfare-Analysis-Bootstrap-CombinedHS.do
+/var/folders/5q/yhcyv3z55wvg6lhgc3h22kk00000gq/T/20240209-1/replication-package/__MACOSX/NCP Replication Packet/Analysis/Code/._5-Compare-DG-utilities.do
+/var/folders/5q/yhcyv3z55wvg6lhgc3h22kk00000gq/T/20240209-1/replication-package/__MACOSX/NCP Replication Packet/Analysis/Code/._6-Stability-DG-Weights.do
+/var/folders/5q/yhcyv3z55wvg6lhgc3h22kk00000gq/T/20240209-1/replication-package/__MACOSX/NCP Replication Packet/Analysis/Code/._7-Stability-DG-Weights-2.do
+/var/folders/5q/yhcyv3z55wvg6lhgc3h22kk00000gq/T/20240209-1/replication-package/__MACOSX/NCP Replication Packet/Analysis/Code/._AI-flag-Survey1.do
+/var/folders/5q/yhcyv3z55wvg6lhgc3h22kk00000gq/T/20240209-1/replication-package/__MACOSX/NCP Replication Packet/Analysis/Code/._AI-flag-Survey2.do
+/var/folders/5q/yhcyv3z55wvg6lhgc3h22kk00000gq/T/20240209-1/replication-package/__MACOSX/NCP Replication Packet/Analysis/Code/._Heterogeneous-MU.do
+/var/folders/5q/yhcyv3z55wvg6lhgc3h22kk00000gq/T/20240209-1/replication-package/__MACOSX/NCP Replication Packet/Analysis/Code/._Supplementary Survey 1 Analysis.do
+/var/folders/5q/yhcyv3z55wvg6lhgc3h22kk00000gq/T/20240209-1/replication-package/__MACOSX/NCP Replication Packet/Analysis/Code/._Supplementary Survey 2 Analysis.do
+/var/folders/5q/yhcyv3z55wvg6lhgc3h22kk00000gq/T/20240209-1/replication-package/__MACOSX/NCP Replication Packet/Analysis/Code/._Supplementary Survey 3 Analysis.do
+/var/folders/5q/yhcyv3z55wvg6lhgc3h22kk00000gq/T/20240209-1/replication-package/__MACOSX/NCP Replication Packet/Analysis/Code/._Welfare-values.do
+/var/folders/5q/yhcyv3z55wvg6lhgc3h22kk00000gq/T/20240209-1/replication-package/__MACOSX/NCP Replication Packet/Analysis/Code/._X_DG-vs-OO-Weights.do
+/var/folders/5q/yhcyv3z55wvg6lhgc3h22kk00000gq/T/20240209-1/replication-package/__MACOSX/NCP Replication Packet/Analysis/Code/._X_IV-test-for-happiness-satisfaction.do
+/var/folders/5q/yhcyv3z55wvg6lhgc3h22kk00000gq/T/20240209-1/replication-package/__MACOSX/NCP Replication Packet/Analysis/Code/._X_Order-effects.do
+/var/folders/5q/yhcyv3z55wvg6lhgc3h22kk00000gq/T/20240209-1/replication-package/__MACOSX/NCP Replication Packet/Analysis/Code/._X_PCA.do
+/var/folders/5q/yhcyv3z55wvg6lhgc3h22kk00000gq/T/20240209-1/replication-package/__MACOSX/NCP Replication Packet/Analysis/Code/._X_Test-OVB.do
+/var/folders/5q/yhcyv3z55wvg6lhgc3h22kk00000gq/T/20240209-1/replication-package/__MACOSX/NCP Replication Packet/Analysis/Code/._comp_OO_CC.do
+/var/folders/5q/yhcyv3z55wvg6lhgc3h22kk00000gq/T/20240209-1/replication-package/NCP Replication Packet/Analysis/Code/bot.tex
+/var/folders/5q/yhcyv3z55wvg6lhgc3h22kk00000gq/T/20240209-1/replication-package/NCP Replication Packet/Analysis/Code/top.tex
+/var/folders/5q/yhcyv3z55wvg6lhgc3h22kk00000gq/T/20240209-1/replication-package/NCP Replication Packet/Analysis/Output/.tex
+/var/folders/5q/yhcyv3z55wvg6lhgc3h22kk00000gq/T/20240209-1/replication-package/__MACOSX/NCP Replication Packet/Analysis/Code/._bot.tex
+/var/folders/5q/yhcyv3z55wvg6lhgc3h22kk00000gq/T/20240209-1/replication-package/__MACOSX/NCP Replication Packet/Analysis/Code/._top.tex
+/var/folders/5q/yhcyv3z55wvg6lhgc3h22kk00000gq/T/20240209-1/replication-package/__MACOSX/NCP Replication Packet/Analysis/Output/._.tex

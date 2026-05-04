@@ -1,6 +1,11 @@
-title: "Stand-in title"
-author: "Dr Prof James 'JayJay' Author"
-paper_id: 12345678
+title: "Welfare and the Act of Choosing"
+author: "Kim"
 round: 1
-repo: "https://www.github.com/standin"
-dropbox_rel_path: "JPE/Author-12345678/1"
+repo: "https://github.com/JPE-Reproducibility/JPE-Kim-20240209"
+paper_id: 20240209
+journal: "JPE"
+paper_slug: "Kim-20240209"
+dropbox_rel_path: "JPE/Kim-20240209/1"
+package_size_gb: 0.01
+package_max_file_size_gb: 2
+package_max_pkg_size_gb: 10
