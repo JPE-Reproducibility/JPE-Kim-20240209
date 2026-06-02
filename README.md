@@ -1,4 +1,4 @@
-# JPE/Kim-20240209/1
+# JPE/Kim-20240209/2
 
 [![Run Precheck](https://github.com/JPE-Reproducibility/JPE-Kim-20240209/actions/workflows/precheck.yml/badge.svg)](https://github.com/JPE-Reproducibility/JPE-Kim-20240209/actions/workflows/precheck.yml)
 
@@ -78,4 +78,3 @@ Few remarks:
 1. Get VScode
 2. install [markdown paste](https://marketplace.visualstudio.com/items/?itemName=telesoho.vscode-markdown-paste-image) extension
 3. Go to [https://jpe-reproducibility.github.io/jpereplicators/](https://jpe-reproducibility.github.io/jpereplicators/) for step by step guidance.
-
