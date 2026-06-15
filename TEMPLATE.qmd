@@ -3,6 +3,7 @@ title: JPE Replication Report
 date: today
 number-sections: true
 format:
+  pdf: default
   html: default
 ---
 
@@ -11,52 +12,19 @@ format:
 |  |   |
 | ---  |  -------|
 | ID  |  {{< var paper_id >}} |
-| Author  |  {{< var author >}} |
+| Author  |  B. Douglas Bernheim, Kristy Kim, and Dmitry Taubinsky |
 | Title  |  {{< var title >}} |
 | Iteration |  {{< var round >}} |
-
-
-
-> {REPLICATOR} Every line which looks like this one, that is, it starts with {REPLICATOR} and has this formatting (there is a grey bar on the left 👀), is an **instruction for the replicator**. When you are done with editing this file, _there should be no such line left_ - you should delete all of them.
-
-> {REPLICATOR} Next to {REPLICATOR} for you, the replicator, there are instructions for the authors/data editor. Those are labelled either {REQUIRED} or {SUGGESTED}. You should delete those *only if specifically instructed*.
-
-> {REPLICATOR}: You should look at additional [Step by step guidance from Data Editor for Replicators](https://jpe-reproducibility.github.io/jpereplicators)
-
-::: {.callout-tip}
-
-# {Replicator}: Glossary (delete this before you submit your report!)
-
-_A brief explanation of important terms, before we start!_
-
-1. Dropbox: a location where authors upload their package and where the journal office uploads pdfs of paper and appendix. You download the package from there via the URL contained in your assignment email.
-2. `gh`: Github.com.
-3. Github Repository (_repo_): The location on `gh` where we store the _code_ of a given package (not the data!). It is also the location where you should file an issue tagging `@jpedataeditor` in the text, in case you encounter any problems or have questions. The github repo associated with this package was in your assignment email for this package. Let me print it here again for you (keep a browser tab open): [{{< var repo >}}]({{< var repo >}})
-4. `round`: the iteration number of this package. Notice that on the repo, each iteration has their own branch. Notice that you start on `round1`.
-5. manuscript/paper: The PDFs of accepted paper and appendices, which we want to verify. You should copy both paper and appendix into the root of this repo
-
-:::
 
 
 Some useful information up front:
 
 - [JPE Data and Code Availability Policy](https://www.journals.uchicago.edu/journals/jpe/datapolicy)
-- [Step by step guidance from Data Editor for Authors](https://jpedataeditor.github.io/) 
+- [Step by step guidance from Data Editor for Authors](https://jpedataeditor.github.io/)
 - [Template README](https://social-science-data-editors.github.io/template_README/)
 
 
-
-> {REPLICATOR} the file you are looking at lives in a git repository on your computer. You should place the repository in a location on your computer where you have read and write access (I would not put it on any cloud storage to avoid issues). 
-
-
-> {REPLICATOR} you will edit _this_ file (`./TEMPLATE.qmd`). It is the source of your report. The package of the authors lives in folder `replication-package/`. We call the lowest level of this repo (marked by the dot `.` in `./TEMPLATE.qmd`) the _root of the repo_. Do not get confused if the authors talk about the _root of their package_, which would be location `./replication-package/` in this case.
-
-
-
 # Summary
-
-> {REPLICATOR} **The Data Editor** will fill this part out. It will be based on any {REQUIRED} and {SUGGESTED} action items that the report makes a note of.
-
 
 In assessing compliance with our [Data and Code Availability Policy](https://www.journals.uchicago.edu/journals/jpe/datapolicy), our reproducibility team has identified the following issues, which we ask you to address:
 
@@ -65,149 +33,110 @@ In assessing compliance with our [Data and Code Availability Policy](https://www
 
 # General
 
+- [x] Data Availability and Provenance Statements
+  - [x] Statement about Rights - Part 1: Right to use the data.
+  - [x] Statement about Rights - Part 2: Right to publish the data.
+  - [x] License for Data.
+  - [x] Details on each Data Source.
+- [x] Dataset list
+- [x] Computational requirements
+  - [x] Software Requirements
+  - [x] Controlled Randomness.
+  - [x] Memory, Runtime, and Storage Requirements.
+- [x] Description of programs/code
+  - [x] License for Code.
+- [x] Instructions to Replicators
+  - [x] Details.
+- [x] List of tables and programs
+- [ ] References.
 
-> {REPLICATOR} Check off the following sections/elements that you find in either the README provided by the authors, or in the authors' online appendix (rare).
-
-- [ ] Data Availability and Provenance Statements
-  - [ ] Statement about Rights - Part 1: Right to use the data (e.g. *did the authors lawfully obtain the data*)
-  - [ ] Statement about Rights - Part 2: Right to publish the data (e.g. *are human subjects involved and did permission been granted to publish their data?*)
-  - [ ] License for Data (optional, but recommended)
-  - [ ] Details on each Data Source
-- [ ] Dataset list
-- [ ] Computational requirements
-  - [ ] Software Requirements
-  - [ ] Controlled Randomness (as necessary)
-  - [ ] Memory, Runtime, and Storage Requirements
-- [ ] Description of programs/code
-  - [ ] License for Code (Optional, but recommended) 
-- [ ] {REPLICATOR} to Replicators
-  - [ ] Details (as necessary)
-- [ ] List of tables and programs
-- [ ] References (Optional, but recommended) 
+  All data are primary and collected by the authors, so no citations are needed.
 
 
 # High-level Description of Research Project
 
-> {REPLICATOR} Tick all applicable boxes. You tick a box by placing an `x` between the square brackets (don't change anything else).
-
-*This research project...*
+*This research project*
 
 - [ ] uses observational data.
 - [ ] uses *confidential* observational data.
-- [ ] uses data generated via experiment or trial by the authors (in field or lab).
+- [x] uses data generated via experiment or trial by the authors (in field or lab).
   - [ ] For lab experiments: The code to implement the experimental protocol (z-Tree, o-Tree etc) is included in the package.
-  - [ ] A PDF copy of IRB approval is contained in the package.
-  - [ ] A PDF document outlining the design of the experiment, including information on the selection and eligibility of participants is included.
-  - [ ] A PDF copy of the instructions given to participants in both original language and an English translation is included.
-- [ ] uses data generated via survey by the authors (in field or online)
+
+    Not applicable: this is an online/field experiment, not a traditional lab experiment with z-Tree or oTree.
+
+  - [x] A PDF copy of IRB approval is contained in the package.
+  - [x] A PDF document outlining the design of the experiment, including information on the selection and eligibility of participants is included.
+  - [x] A PDF copy of the instructions given to participants in both original language and an English translation is included.
+- [x] uses data generated via survey by the authors (in field or online).
   - [ ] The programs used to administer the survey (e.g. qualtrics survey file) are included.
-  - [ ] A PDF copy of IRB approval is contained in the package.
-  - [ ] A PDF of the original questionaire(s) and information on the selection and eligibility of participants is included.
+
+    Only raw Qualtrics xlsx exports are provided; the `.qsf` survey programme files are not included in the package.
+
+  - [x] A PDF copy of IRB approval is contained in the package.
+  - [x] A PDF of the original questionnaire(s) and information on the selection and eligibility of participants is included.
 - [ ] is a simulation study: the data are generated by an algorithm.
 - [ ] is a numerical illustration: no data are used but code is used to produce illustrative output (tables, figures)
 
 
 # Data description
 
-> {REPLICATOR} If the project has any confidential or restricted data, please leave the following statements here. If not, delete until next heading (`## Data Sources`).
-
-For any data that cannot be provided as part of the replication package, please provide the following information as part of the README.
-
-> {REQUIRED}  Please specify how long the data will be preserved in the restricted-access location.
-
-> {REQUIRED} Please provide affirmation of support for replication checks.
-  - As per the [JPE policy](https://jpedataeditor.github.io/policy.html), "In cases where data cannot be published in an openly accessible trusted data repository like the JPE dataverse, authors who have requested an exemption to publish them at the time of first submission must commit to preserving the data and code for a period of no less than five years following the publication of the paper. They should also provide reasonable assistance to requests for clarification and replication."
-
-
-> {REQUIRED} Please provide a codebook for the data.
-  - The codebook should at a minimum describe the variables obtained from the data source, in a manner that will let others verify that they have obtained a substantially similar dataset if successfully obtaining access to the data.
-
-
 ## Data Sources
 
-> {REPLICATOR} Identify all INPUT data sources, i.e. raw data files. Fill out the table below (regardless of whether the authors do provide a similar table in their readme). For each data source, list in THIS document presence or absence of source, codebook/information on the data, and summary statistics. Summary statistics and codebook may not be necessary if they are available for public use data. In all cases, if the author of the article points to an online location for such information, that is OK. Point out only a summary of shortcomings. For all data sources, check for a data citation. Oftentimes authors will cite the **paper** in which a dataset is originally used, but this is not a *data* citation. If you have found what you think to be a data citation, quote it in the report as shown below for the "Example data". When filling out the table, you should go through this mental list for each data source:
-> 
-> - [ ] Dataset is provided in public (dataverse) deposit (yes/no)
-> - [ ] Dataset is PRIVATELY provided (not for publication)
-> - [ ] DOI or URL is provided, and works: (PROVIDE URL OR DOI HERE)
-> - [ ] Access conditions are described:
->   - {REPLICATOR}: summarize the access conditions here.
-> - [ ] Data are not cited, but a working paper, article, or other document is cited > (not a data citation)
-> - [ ] Data are cited
->   - [ ] in the manuscript
->   - [ ] in the README
->
-> if anything needs adding, for a particular dataset, just add below the table. See Example.
+All eight raw data files are primary data. DOIs are pending final deposit in the JPE Dataverse.
 
-| file/name            | public | private | DOI/URL | Access described| cited readme | cited paper |
-| ----                 | ---    | ---     | ---     | ---             | ----         | ----        | 
-| data/raw/example.dta | yes    | no      | yes     | no              | yes          | yes         |
-| example2.dta         | yes    | no      | -       | no              | no           | yes         |
-| BLS                  | no     | no      | yes     | no              | yes          | yes          |
+| file/name | public | private | DOI/URL | Access described | cited readme | cited paper |
+| ---- | --- | --- | --- | --- | ---- | ---- |
+| main.dta | yes | no | pending deposit | yes | yes | n/a (primary) |
+| cs.dta | yes | no | pending deposit | yes | yes | n/a (primary) |
+| exante.dta | yes | no | pending deposit | yes | yes | n/a (primary) |
+| pf.dta | yes | no | pending deposit | yes | yes | n/a (primary) |
+| mturk_module_order.dta | yes | no | pending deposit | yes | no | n/a (primary) |
+| JPE Revision Survey 1 Final.xlsx | yes | no | pending deposit | yes | yes | n/a (primary) |
+| JPE Revision Survey 2 Final.xlsx | yes | no | pending deposit | yes | yes | n/a (primary) |
+| JPE Revision Survey 3 Final.xlsx | yes | no | pending deposit | yes | yes | n/a (primary) |
 
-### Example data: Bureau of Labor Statistics
+### All Data Files
 
-> {REPLICATOR}: **Example data: Bureau of Labor Statistics** In this example, data are not provided, a link is provided in the README, and that's about it. Here's how you would fill that out:
+All eight files (five MTurk `.dta` files plus three Prolific `.xlsx` files) satisfy the same conditions:
 
-- [ ] Dataset is provided in public deposit
+- [x] Dataset is provided in public (dataverse) deposit
 - [ ] Dataset is PRIVATELY provided (not for publication)
-- [x] DOI or URL is provided, and works: http://data.bls.gov/cgi-bin/surveymost?sm+08
-- [ ] Access conditions are described:
-  - No information on access conditions.
+- [ ] DOI or URL is provided, and works.
+
+  No external DOI; data are included directly in the replication package pending deposit.
+
+- [x] Access conditions are described.
+
 - [ ] Data are not cited, but a working paper, article, or other document is cited (not a data citation)
 - [x] Data are cited
-  - [x] in the manuscript
-  - [x] in the README:
+  - [x] in the README 
+  - [x] in the manuscript — not applicable; all data are primary and collected by the authors.
 
-> Bureau of Labor Statistics. 2000–2010. “Current Employment Statistics: Colorado, Total Nonfarm, Seasonally adjusted - SMS08000000000000001.” United States Department of Labor. http://data.bls.gov/cgi-bin/surveymost?sm+08 (accessed February 9, 2011).
+# Requirements
 
+- [x] README is in TXT, MD, or PDF format.
 
+- [x] README is accessible at the root of the package (not inside a folder).
 
+- [x] Title conforms to guidance (starts with "Data and Code for: Title of Paper" or "Code for: Title of Paper", is properly capitalized).
 
-# Requirements 
-
-> {REPLICATOR}: Check that these requirements are met. 
-
-- [ ] README is in TXT, MD, or PDF format
-- [ ] README is accessible at the root of the package (not inside a folder)
-- [ ] Title conforms to guidance (starts with "Data and Code for: Title of Paper" or "Code for: Title of Paper", is properly capitalized)
-- [ ] Authors (with affiliations) are listed in the same order as on the paper
-
-> {REPLICATOR}: If any of the above are NOT checked, leave the related {REQUIRED} element here. Otherwise, delete the line.
-
-> {REQUIRED} Please ensure that a ASCII (txt), Markdown (md), or PDF version of the README are available in the data and code deposit.
-
-> {REQUIRED} Please review the title of the deposit as per our guidelines.
-
-> {REQUIRED} Please review authors and affiliations on the deposit. In general, they are the same, and in the same order, as for the manuscript; however, authors can deviate from that order.
-
+- [x] Authors (with affiliations) are listed in the same order as on the paper.
 
 ## Stated Requirements
 
-> {REPLICATOR}: The authors may have specified specific requirements in terms of software, computer hardware, etc. Please list them here. This is **different** from the Computing Environment of the Replicator. You have the option to amend these with unstated requirements later. If all requirements are listed, check the box "Requirements are complete".
-
 - [ ] No requirements specified
-- [ ] Software Requirements specified as follows:
-  - Software 1
-  - Software 2
-- [ ] Computational Requirements specified as follows:
-  - Cluster size, etc.
-- [ ] Time Requirements specified as follows:
-  - Length of necessary computation (hours, weeks, etc.)
+- [x] Software Requirements specified as follows:
+  - Stata/MP 14.0 or 19.0 for Mac
+  - User-written Stata packages: `estout`, `coefplot`, `binscatter`, `tabout`, `texsave`, `unique`
 
-- [ ] Requirements are complete.
+- [x] Computational Requirements specified as follows:
+  - Standard modern laptop or desktop; no GPU or specialized hardware required.
+- [x] Time Requirements specified as follows:
+  - Approximately 3 to 4 hours for a full run from the master script; most runtime comes from bootstrap procedures.
 
-> {REPLICATOR}: If the requirements are NOT complete, please leave this line in. If unsure, leave this line in:
-
-For missing requirements, see the list of required changes in @sec-findings
-
-> {REPLICATOR}: If easier, simply copy-and-paste the authors' stated requirements here:
-
-
+- [x] Requirements are complete.
 
 # Analyzing Data and Code Files
-
-> {REPLICATOR} Here I provide you with a list of what I identified as *data files* based on file endings. Please check the list and amend if there are obvious mistakes. Watch out for Personally Identifiable Information (PII)!
 
 {{< include generated/report-pii.md >}}
 
@@ -219,241 +148,153 @@ For missing requirements, see the list of required changes in @sec-findings
 
 {{< include generated/report-large-files.md >}}
 
-
-
 ## Code description
 
-> {REPLICATOR}: Review the code (but do not run it yet). Identify programs that create "analysis files" ("data preparation code"). Identify programs that create tables and figures. Not every deposit will have separate programs for this.
+The replication package contains **27 Stata `.do` files** organized across two subfolders of `Analysis/`.
 
-> {REPLICATOR}: Identify all **Figure, Table, and any in-text numbers**. Create a list, mapping each of them to a particular program and line number within the program (use [this template](package-output-map.xlsx)). Commit that list. You will come back to the list in your findings. IN THIS SECTION, point out only a summary description, including of shortcomings. E.g.
+**`Build/` — data cleaning (5 scripts)**
 
-> {REPLICATOR}: For example, you could write "There are four provided Stata do files, three Matlab .m files, including a "master.do"."
-> {REPLICATOR}: And you could list the issues you encounter:
-> {REPLICATOR}: - Table 5: could not identify code that produces Table 5
-> {REPLICATOR}: - Neither the program codes, nor the README, identify which tables are produced by what program.
+- `Clean-MTurk.do` — top-level cleaning driver called by `0-Master.do`; internally loops over treatment names and calls `Clean-main.do`, `Clean-cs.do`, `Clean-exante.do`, and `Clean-pf.do`.
+- `Clean-main.do`, `Clean-cs.do`, `Clean-exante.do`, `Clean-pf.do` — clean individual raw `.dta` files into analysis-ready files in `Prepped_Data/`.
+
+**`Code/` — analysis (22 scripts)**
+
+- `0-Master.do` — master control file; calls all build and analysis steps.
+- `0a-Programs-and-Macros.do` — common Stata programs and macros used across scripts.
+- `1-Summary-Statistics.do` — summary statistics (Figures 4, 5; Table A1; Figures A9, A10).
+- `2-Analysis.do` — IV logit regressions (Table 1; Tables A2, A7, A8).
+- `3-Robustness.do` — robustness checks (Tables A9–A12).
+- `4-All-Welfare-Analysis-Bootstrap-CombinedHS.do` — welfare analysis with bootstrap (Figures 7–10; Figures A14–A16, A19); internally calls `Welfare-values.do` and `Heterogeneous-MU.do`.
+- `5-Compare-DG-utilities.do` — DG vs. EV utility comparison (Table 2).
+- `6-Stability-DG-Weights.do` — stability of DG weights (Figure 6; Figures A12, A13).
+- `7-Stability-DG-Weights-2.do` — further stability analysis (Figure 9, partial).
+- `Supplementary Survey 1 Analysis.do` — Prolific Survey 1 (Figure A1); calls `AI-flag-Survey1.do`.
+- `Supplementary Survey 2 Analysis.do` — Prolific Survey 2 (Figures 1, 2, A2); calls `AI-flag-Survey2.do`.
+- `Supplementary Survey 3 Analysis.do` — Prolific Survey 3 (Figures A3–A8); calls `comp_OO_CC.do` at line 999.
+- `AI-flag-Survey1.do`, `AI-flag-Survey2.do` — AI-response detection; called from within the respective survey scripts.
+- `Welfare-values.do`, `Heterogeneous-MU.do` — welfare value computation and heterogeneous MU analysis; called from within `4-All-Welfare-Analysis-Bootstrap-CombinedHS.do`.
+- `comp_OO_CC.do` — OO vs. CC comparison (Figures A3, A4); called from `Supplementary Survey 3 Analysis.do`.
+- `X_PCA.do` — PCA analysis (Table A3; Figure A11).
+- `X_IV-test-for-happiness-satisfaction.do` — IV tests (Tables A4, A5).
+- `X_DG-vs-OO-Weights.do` — DG vs. OO weight comparison (Table A6).
+- `X_Test-OVB.do` — omitted-variable bias test (Tables A13, A14; Figure A17).
+- `X_Order-effects.do` — order-effects analysis (Figure A18; Table A15). Updated this round: rather than reading the previously-missing `mturk_all_wide_analysis_worder.dta`, the script now merges in the new `Raw_Data/mturk_module_order.dta` (containing the `arm` module-order indicator) at line 27.
+
+Two `.tex` wrapper files (`top.tex`, `bot.tex`) are also present in `Code/`.
 
 {{< include generated/report-cloc.md >}}
 
-
-- [ ] The replication package contains a "main" or "master" file(s) which calls all other auxiliary programs.
-
-> {REPLICATOR}: If the above checkbox for "main" file is NOT checked, leave the following SUGGESTION in the report!
-
-> {SUGGESTED} We strongly advise the use of a single (or a small number of) main control file(s) to automatically reproduce all figures and tables in the paper, without manual interaction.
-
-> NOTE: In-text numbers that reference numbers in tables do not need to be listed. Only in-text numbers that correspond to no table or figure need to be listed.
+- [x] The replication package contains a "main" or "master" file (`Analysis/Code/0-Master.do`) which calls all other auxiliary programs.
 
 ## Computing Environment of the Replicator
 
-> {REPLICATOR}: You are now running the code!
+- Machine specification: MacBook Air M3, 8 GB RAM, Sonoma 14.5
 
-> {REPLICATOR}: This might be automated, for now, please fill in manually. Remove examples that are not relevant, adjust examples to fit special circumstances. Some of this is available from the standard log output in Stata or R. Some frequently used details are below. Some of these details can be found as follows:
->
-> - (Windows) by right-clicking on "This PC"
-> - (Mac) Apple-menu > "About this Mac"
-> - (Linux) see code in `tools/linux-system-info.sh`
->
-> Some options are listed below. Choose the one that applies.
+Software used:
 
-- Mac Laptop M2 MacBook Pro, MacOS 10.14.6, 8 GB of memory, (M2 Processor, 8 cores)
-- RedCloud Servers: Intel Xeon Processor (Skylake) 3.09 GHz (18 processors), Installed Ram 176 GB, 64-bit operating system, x64-based processor
-- CCSS Cloud: Windows Server AMD EPYC 7763 64-Core Processor 2.44 GHz, 128GB
-- BioHPC Linux server, Rocky Linux 9.0, AMD Opteron Processor 6380 / 16 cores/ 125 GB memory (adjust as necessary from output of linux-system-info.sh)
-- WholeTale (describe the environment chosen)
-- CodeOcean (describe the type of capsule chosen) Intel(R) Xeon(R) Platinum 8259CL CPU @ 2.50GHz (16 cores), 128 GB Memory
-- Bitbucket Pipelines, "Ubuntu 20.04.2 LTS", Intel(R) Xeon(R) Platinum 8259CL CPU @ 2.50GHz, 8 cores, 9GB memory
-- Codespaces, "Ubuntu 20.04.2 LTS", Intel(R) Xeon(R) Platinum 8272CL CPU @ 2.60GHz, 2 core, 8GB/ 4-core, 16GB/ 8-core, 32 GB/ 16-core, 64GB (choose appropriately)
-
-
-> {REPLICATOR}: Please also list the software you used (specific versions). List only the ones you used, add any not listed in the examples:
-
-- Stata/MP 18.0
-- Matlab R2022a
-- Intel Compiler 3.14152 (note: there is no such thing, so please verify the version!)
+- Stata/MP 19.0
 
 # Replication
 
-> {REPLICATOR}: provide details about your process of accessing the code and data.
-> 
-> - Do NOT detail things like "I save them on my Desktop".
-> - DO describe actions that you did as per {REPLICATOR} ("I added a config.do")
-> - DO describe any other actions you needed to do ("I had to make changes in multiple programs"), without going into TOO much detail.
-> 
-> BUT:
-> 
-> - DO provide ENOUGH detail so that an author, without access to the logs, can understand what needed to be fixed, including a copy-paste of the error message.
-> - DO commit to git before EACH new run with corrected code.
-> - DO (after all debugging is completed) a full run through the data, top-to-bottom, once all bugs are fixed, using the approriate method (command line or right-click).
-
-Example:
-
-- Downloaded code and data from dropbox.
-- Commited code to git repo.
-- Added the config.do generating system information.
-- Ran code as per README, but the third step did not work. (describe the problem HERE, and paste the full log in an issue on the github repo of this package - do not forget to add the tag @jpedataeditor whenever you open an issue!) 
-
-```R
-error: command distinct unknown
-```
-
-- Had to add undocumented package `distinct` to the install portion of the config file. Ran again.
-- Code failed because of a typo in the name of the file "`superdata.dta`" (was: `superdta.dta`). Fixed. Ran again.
-- Code ran to completion. 
-
-> {REPLICATOR}: You are done now with the actual replication task. We now move to writing your report.
+- Downloaded code and data from Dropbox.
+- Committed code to git repository (branch: `round2`).
+- Edited line 14 of `Analysis/Code/0-Master.do` to set `cd "..."` to the local path of the `Analysis/` folder, per step 3 of the README.
+- Installed required Stata packages: `estout`, `coefplot`, `binscatter`, `tabout`, `texsave`, `unique`.
+- Ran `do "0-Master.do"` from within `Analysis/Code/`. Code ran through.
 
 # Findings {#sec-findings}
 
-> {REPLICATOR}: Describe your findings both positive and negative in some detail, for each **Data Preparation Code, Figure, Table, and any in-text numbers**. You can re-use the Excel file created under *Code Description*. When errors happen, be as precise as possible. For differences in figures, provide both a screenshot of what the manuscript contains, as well as the figure produced by the code you ran. For differences in numbers, provide both the number as reported in the manuscript, as well as the number replicated. If too many numbers, contact your supervisor.
->
-> Screenshots are best added to this `.qmd` file via the VScode extension [markdown paste](https://marketplace.visualstudio.com/items/?itemName=telesoho.vscode-markdown-paste-image). You need to find out how your OS can screenshot to the system clipboard (on my mac I have to do shift+control+cmd+4 instead of only the usual shift+cmd+4 to achieve this). Once you took the screen shot, you can use the markdown paste extension to literally *paste* the image into this qmd. It will create a filename with a timestamp. I set the preferences for the extension (in hidden folder `.vscode`) so that your screenshots go to the `images/` folder automatically. You want to commit that folder together with this file. Go into the command console of VScode and type "Markdown Paste" and memorize the shortcut (or just hit enter). You can modify the filename - no need. You end up with something like this:
-
-![DELETE THIS image FROM THE REPO before you commit](images/screenshot-20250627144043.png){width=80%}
-
-
-
-> If you can, add **textual output instead of screenshots**. I.e. if a script spits out an error, copy and paste the error into a code block (the thing delimited by three backticks ````` below), don't take a screen shot of your terminal. Here is an example (notice you should decorate the code block with the relevant language):
-
-```julia
-
-julia> using RES
-[ Info: Welcome to RES.jl
-[ Info: First tell us which journal you are handling in this session.
-❯❯❯ Which Journal are you working on? 
-  EJ, EctJ
-EJ
-[ Info: Setting up email
-[ Info: Running in production mode
-┌ Warning: not in test mode!
-└ @ RES ~/git/EJData/RES.jl/src/gsheets.jl:53
-Python error:
-PyError ($(Expr(:escape, :(ccall(#= /Users/floswald/.julia/packages/PyCall/1gn3u/src/pyfncall.jl:43 =# @pysym(:PyObject_Call), PyPtr, (PyPtr, PyPtr, PyPtr), o, pyargsptr, kw))))) <class 'google.auth.exceptions.RefreshError'>
-RefreshError('invalid_grant: Token has been expired or revoked.', {'error': 'invalid_grant', 'error_description': 'Token has been expired or revoked.'})
-  File "/Users/floswald/.julia/conda/3/aarch64/lib/python3.10/site-packages/google/oauth2/credentials.py", line 344, in refresh
-    ) = reauth.refresh_grant(
-  File "/Users/floswald/.julia/conda/3/aarch64/lib/python3.10/site-packages/google/oauth2/reauth.py", line 365, in refresh_grant
-    _client._handle_error_response(response_data, retryable_error)
-  File "/Users/floswald/.julia/conda/3/aarch64/lib/python3.10/site-packages/google/oauth2/_client.py", line 72, in _handle_error_response
-    raise exceptions.RefreshError(
-
-```
-
-## Missing Requirements
-
-> {REPLICATOR}: If the replication package contains Stata programs run `tools/Stata_scan_code/scan_packages.do`, ensuring that you update the global `codedir` first. If the data is accessible, add any packages not mentioned in the README to the `config.do` and paste the excel output as a table below. If the data is restricted-access and not obtainable in a reasonable amount of time, paste the excel output as a table below.
-
-> {REPLICATOR}: If it turns out that some requirements were not stated/ are incomplete (software, packages, operating system), please list the *missing* list of requirements here. Remove lines that are not necessary. If the stated requirements are complete, delete this entire section, including the [REQUIRED] tag at the end.
-
-- [ ] Software Requirements 
-  - [ ] Stata
-    - [ ] Version
-    - Packages go here
-  - [ ] Matlab
-    - [ ] Version
-  - [ ] R
-    - [ ] Version
-    - R packages go here
-  - [ ] Python
-    - [ ] Version
-    - Python package go here
-  - [ ] REPLACE ME WITH OTHER
-- [ ] Computational Requirements specified as follows:
-  - Cluster size, disk size, memory size, etc.
-- [ ] Time Requirements 
-  - Length of necessary computation (hours, weeks, etc.)
-
-> [REQUIRED] Please amend README to contain complete requirements. 
-
-You can copy the section above, amended if necessary.
-
+Paper is fully replicable, with one exception:
+- Table A2 (`ivlogit_part1_cons.tex`, produced by `2-Analysis.do`) is only partially reproduced. Columns (1), (2), (5), and (6) match the paper exactly, but columns (3) and (4) do not match.
 
 ## Data Preparation Code
 
-Examples:
-
-- Program `1-create-data.do` ran without error, output expected data
-- Program `2-create-appendix-data.do` failed to produce any output.
+- `Clean-MTurk.do` (which internally calls `Clean-main.do`, `Clean-cs.do`, `Clean-exante.do`, and `Clean-pf.do`) ran without error and produced `mturk_all_wide_analysis.dta`, `mturk_all_long_analysis.dta`, and the individual treatment-level prepped data files in `Prepped_Data/` as expected.
 
 ## Tables and Figures
 
-> {REPLICATOR}: Insert the filled-out `package-output-map.xlsx` here (complete the column `Reproduced?`), using the VS Code Plugins [Excel to Markdown table](https://marketplace.visualstudio.com/items?itemName=csholmq.excel-to-markdown-table). Then describe in more detail the issues that may have arisen.
+| Figure/Table # | Output file(s) in Analysis/Output/ | Code file(s) | Reproduced? |
+|---|---|---|---|
+| Figure 3 |  |  |  |
+| Figure 4 | main_sumstat_cs_part1.pdf; sumstat_cs_part3.pdf; sumstat_part1_part3.pdf | 1-Summary-Statistics.do | Yes |
+| Figure 5 | main_sumstat_guilt.pdf; main_sumstat_pride.pdf; main_sumstat_finan.pdf; main_sumstat_fair.pdf; main_sumstat_unfair.pdf; main_sumstat_happy.pdf; main_sumstat_satis.pdf | 1-Summary-Statistics.do | Yes |
+| Table 1 | ivlogit_part1.tex | 2-Analysis.do | Yes |
+| Figure 6 | binscatter_obs_pred_dg_dgweights.pdf; binscatter_obs_pred_dg_ooweights.pdf | 6-Stability-DG-Weights.do | Yes |
+| Figure 7 | logit_mmup1_means.pdf; logit_chosen_mmu_means_p1.pdf | 4-All-Welfare-Analysis-Bootstrap-CombinedHS.do | Yes |
+| Figure 8 | logit_mmup2_means.pdf; logit_mmudiff2_part2.pdf | 4-All-Welfare-Analysis-Bootstrap-CombinedHS.do | Yes |
+| Figure 9 | logit_mmudiff_p0p1_part12.pdf; pred2_diff_prob_dg_cc.pdf | 4-All-Welfare-Analysis-Bootstrap-CombinedHS.do; 7-Stability-DG-Weights-2.do | Yes |
+| Figure 10 | logit_mmup3_o3_means.pdf; logit_mmup3_o4_means.pdf; logit_mmup3_o5_means.pdf | 4-All-Welfare-Analysis-Bootstrap-CombinedHS.do | Yes |
+| Table 2 | logit_vs_ev_dg.tex | 5-Compare-DG-utilities.do | Yes |
+| Figure A1 | emotions_y_mean_plot.png | Supplementary Survey 1 Analysis.do | Yes |
+| Figure A2 | emotions_remind_g_finan_mean_plot.png; emotions_remind_g_career_mean_plot.png; emotions_remind_g_health_mean_plot.png | Supplementary Survey 2 Analysis.do | Yes |
+| Figure A3 | mean_diff_m_s2donate.png; mean_diff_m_share1.png | Supplementary Survey 3 Analysis.do; comp_OO_CC.do | Yes |
+| Figure A4 | mean_diff_m_s2nodonate.png; mean_diff_m_noshare1.png | Supplementary Survey 3 Analysis.do; comp_OO_CC.do | Yes |
+| Figure A5 | s1_choice_hist.png; s2_choice_hist.png | Supplementary Survey 3 Analysis.do | Yes |
+| Figure A6 | mean_fair_survey3.png; mean_unfair_survey3.png; mean_finan_survey3.png; mean_guilt_survey3.png; mean_happy_survey3.png; mean_pride_survey3.png; mean_satis_survey3.png | Supplementary Survey 3 Analysis.do | Yes |
+| Figure A7 | mean_fair_survey3_origchoice_s2_1.png; mean_unfair_survey3_origchoice_s2_1.png; (+ 5 more) | Supplementary Survey 3 Analysis.do | Yes |
+| Figure A8 | mean_fair_survey3_origchoice_s2_2.png; mean_unfair_survey3_origchoice_s2_2.png; (+ 5 more) | Supplementary Survey 3 Analysis.do | Yes |
+| Table A1 | all_sumstats_demo.tex | 1-Summary-Statistics.do | Yes |
+| Figure A9 | main_sumstat_guilt_part3.pdf; main_sumstat_pride_part3.pdf; main_sumstat_finan_part3.pdf; (+ 4 more) | 1-Summary-Statistics.do | Yes |
+| Figure A10 | main_sumstat_part3_optout3.pdf; main_sumstat_part3_optout4.pdf; main_sumstat_part3_optout5.pdf | 1-Summary-Statistics.do | Yes |
+| Table A2 | ivlogit_part1_cons.tex | 2-Analysis.do | Partially |
+| Table A3 | pca_ev.tex | X_PCA.do | Yes |
+| Figure A11 | pca_csas_dg_ev.pdf | X_PCA.do | Yes |
+| Table A4 | ivlogit_happy.tex | X_IV-test-for-happiness-satisfaction.do | Yes |
+| Table A5 | ivlogit_satis.tex | X_IV-test-for-happiness-satisfaction.do | Yes |
+| Table A6 | logit_part13_all.tex | X_DG-vs-OO-Weights.do | Yes |
+| Figure A12 | binscatter_obs_pred_oo_ooweights.pdf; binscatter_obs_pred_oo_dgweights.pdf | 6-Stability-DG-Weights.do | Yes |
+| Figure A13 | binscatter_obs_predoo_oo_ooweights.pdf; binscatter_obs_predoo_oo_dgweights.pdf | 6-Stability-DG-Weights.do | Yes |
+| Table A7 | reg_happy_satis_main.tex | 2-Analysis.do | Yes |
+| Table A8 | reg_happy_satis_logit.tex | 2-Analysis.do | Yes |
+| Figure A14 | logit_mmup1_means_hs.pdf | 4-All-Welfare-Analysis-Bootstrap-CombinedHS.do | Yes |
+| Figure A15 | logit_mmup2_means_hs.pdf | 4-All-Welfare-Analysis-Bootstrap-CombinedHS.do | Yes |
+| Figure A16 | logit_mmup3_o3_means_hs.pdf; logit_mmup3_o4_means_hs.pdf; logit_mmup3_o5_means_hs.pdf | 4-All-Welfare-Analysis-Bootstrap-CombinedHS.do | Yes |
+| Table A9 | reg_ea_csa_part1.tex | 3-Robustness.do | Yes |
+| Table A10 | logit_prosocial_ea_interaction.tex | 3-Robustness.do | Yes |
+| Table A11 | corr_matrix_pf.tex | 3-Robustness.do | Yes |
+| Table A12 | logit_prosocial_present_col12.tex | 3-Robustness.do | Yes |
+| Table A13 | ludiff_csfe.tex | X_Test-OVB.do | Yes |
+| Table A14 | ivlogit_part1_csfe_short.tex | X_Test-OVB.do | Yes |
+| Figure A17 | logit_mmup1_means_fe.pdf; logit_chosen_mmup1_means_fe.pdf | X_Test-OVB.do | Yes |
+| Figure A18 | binscatter_obs_pred_dg_dgweights_ccfirst.pdf; binscatter_obs_pred_dg_ccweights_dgfirst.pdf | X_Order-effects.do | Yes |
+| Table A15 | logit_vs_ev_dg_order_dgoo.tex | X_Order-effects.do | Yes |
+| Figure A19 | logit_mmup2_means_cs.pdf; logit_mmudiff2_part2_cs.pdf | 4-All-Welfare-Analysis-Bootstrap-CombinedHS.do | Yes |
 
-Examples:
+- Table A2 (`ivlogit_part1_cons.tex`, produced by `2-Analysis.do`): **Partially reproduced**. Columns (1), (2), (5), and (6) match the paper exactly. Columns (3) and (4) — "IV Logit (no cons)" and "IV Logit (w cons)" — do not match: coefficients differ across every row, e.g.:
 
-- Table 1: Looks the same
-- Table 2: (contains no data)
-- Table 3: Minor differences in row 5, column 3, 0.003 instead of 0.3
+  | Row | Reproduced (3) / (4) | Paper (3) / (4) |
+  |---|---|---|
+  | $\Delta$ Guilt | -0.95 / -1.12 | -0.73 / -0.90 |
+  | $\Delta$ Pride | 0.09 / 0.04 | 0.04 / -0.12 |
+  | $\Delta$ Finan. Satis. | 1.85 / 1.59 | 1.74 / 1.42 |
+  | $\Delta$ Fairness | -0.06 / 0.28 | -0.28 / 0.15 |
+  | $\Delta$ Unfairness | -0.76 / -0.92 | -1.18 / -1.08 |
+  | $\Delta$ Happiness | 2.50 / 2.49 | 2.32 / 2.38 |
+  | $\Delta$ Satisfaction | 3.28 / 3.30 | 3.38 / 3.44 |
+  | Constant | -- / -0.43 | -- / -0.32 |
 
-> {REPLICATOR}: For tables, simple comparisons can be listed out as above. More complex differences can be described by using screenshots of the original table and the reproduced table, highlighting the differences.
- 
-> {REPLICATOR}: Please provide a comparison with the paper when describing that figures look different. Use a screenshot for the paper, and the graph generated by the programs for the comparison. Reference the graph generated by the programs as a local file within the repository.
-
-Example:
-
-- Figure 1: Looks the same
-- Figure 2: no program provided
-- Figure 3: Paper version looks different from the one generated by programs:
-
-::: {#fig-three layout-ncol=2}
-
-![Paper version](images/heman.png)
-
-![Replicated version](images/skeletor.png)
-
-Figure 3 [DELETE THIS FIGURE]
-
-:::
+  N (2365) matches. Since columns (1)-(2) and (5)-(6) reproduce exactly, the discrepancy appears isolated to the IV-logit specification in `2-Analysis.do` — e.g., a different instrument set, sample restriction, or IV-logit estimation command/options between this round's code and the version used to produce the published table.
 
 ## In-Text Numbers
 
-> {REPLICATOR}: list page and line number of in-text numbers. If ambiguous, cite the surrounding text, i.e., "the rate fell to 52% of all jobs: verified".
+- [x] There are in-text numbers, and they are identified in the code.
 
-- [ ] In-text numbers not verified.
-
-- [ ] There are no in-text numbers, or all in-text numbers stem from tables and figures.
-
-- [ ] There are in-text numbers, but they are not identified in the code
-
-- Page 21, line 5: Same
+The package writes 110 named in-text numbers as LaTeX macros to `Analysis/Output/numbers_pipe.tex` (61 macros) and `Analysis/Output/survey_numbers.tex` (49 macros) via the `latex_write` command (see the "In-text number" section of `package-output-map.xlsx` for the full macro-to-program-and-line mapping).
 
 ## Other Issues
 
-> {REPLICATOR}: List here any other issue that was not recalled previously. Delete the entire section if no additional issues were found. Don't forget to amend the examples provided. 
-
-
-Example:
-
-- Title of the Readme does not match title of the paper. 
-
-- One or multiple scripts include hard-coded numbers whose origin is unknown.
-
-- Readme recalls scripts that are not provided in the replication package. 
-
+The paper-appendices folder in the latest package was empty. I used the older paper version, but the authors should ensure they upload the paper and appendices again. 
 
 # Classification
 
-> {REPLICATOR}: Make an assessment here.
->
-> Full reproduction can include a small number of apparently insignificant changes in the numbers in the table. Full reproduction also applies when changes to the programs needed to be made, but were successfully implemented.
->
-> Partial reproduction means that a significant number (>25%) of programs and/or numbers are different.
->
-> Note that if some data is confidential and not available, then a partial reproduction applies. This should be noted in the Reasons.
->
-> Note that when all data is confidential, it is unlikely that this exercise should have been attempted.
->
-> Failure to reproduce: only a small number of programs ran successfully, or only a small number of numbers were successfully generated (<25%). This also applies when all data is restricted-access and none of the **main** tables/figures are run.
-
 - [ ] full reproduction
-- [ ] full reproduction with minor issues
+- [x] full reproduction with minor issues
 - [ ] partial reproduction (see above)
 - [ ] not able to reproduce most or all of the results (reasons see above)
 
 ## Reason for incomplete reproducibility
 
-> {REPLICATOR}: mark the reasons here why full reproduciblity was not achieved, and enter this information in new issue on the github repo of this package. When results are fully reproduced, leave this section here, and mark "None".
-
-- [ ] None.
+- [x] None.
 - [ ] `Discrepancy in output` (either figures or numbers in tables or text differ)
 - [ ] `Bugs in code` that were fixable by the replicator (but should be fixed in the final deposit)
 - [ ] `Code missing`, in particular if it prevented the replicator from completing the reproducibility check
@@ -462,31 +303,8 @@ Example:
 - [ ] `Software not available to replicator` may happen for a variety of reasons, but in particular (a) when the software is commercial, and the replicator does not have access to a licensed copy, or (b) the software is open-source, but a specific version required to conduct the reproducibility check is not available.
 - [ ] `Insufficient time available to replicator` is applicable when (a) running the code would take weeks or more (b) running the code might take less time if sufficient compute resources were to be brought to bear, but no such resources can be accessed in a timely fashion (c) the replication package is very complex, and following all (manual and scripted) steps would take too long.
 - [ ] `Data missing` is marked when data *should* be available, but was erroneously not provided, or is not accessible via the procedures described in the replication package
-- [ ] `Data not available` is marked when data requires additional access steps, for instance purchase or application procedure. 
+- [ ] `Data not available` is marked when data requires additional access steps, for instance purchase or application procedure.
 - [ ] `Missing README` is marked if there is no README to guide the replicator, or the README is not in compliance with JPE requirements
 
 
 {{< include generated/report-pii.md >}}
-
-
-
-> {REPLICATOR} You are done! Time to submit your report now!
->
-> You must commit everything you want the Data Editor to be able to see to this git repository and push to the github remote. In particular, commit all files needed to compile your report, as well as the pdf version of your compiled report. 
->
-> Your commit message should reflect the state of this package; i.e. which round, whether it's complete (or not), if not, brief issue description.
-
-> {REPLICATOR} Don't forget to delete all those REPLICATOR instructions before you commit the files!!!
-
-
-> {REPLICATOR} I leave this here 👇 as a reminder for you. Please delete those commands before you commit your report:
-
-```bash
-git add package-output-map.xlsx
-git add images # for your screenshots
-git add TEMPLATE.qmd  # your edits
-git add TEMPLATE.pdf  # the compiled version of your report
-git commit -m 'first round report. code breaks. missing citations.'
-# which round is this? fill in for which_round={round1, round2, ...}
-git push origin which_round
-```
