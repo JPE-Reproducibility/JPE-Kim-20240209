@@ -3,7 +3,7 @@
 
 We found the following set of hard coded numbers. This may be completely legitimate (parameter input, thresholds for computations, etc), and is hence only for information.
 
-**/var/folders/5q/yhcyv3z55wvg6lhgc3h22kk00000gq/T/20240209-1/replication-package/NCP Replication Packet/Analysis/Code/Supplementary Survey 3 Analysis.do**
+**/var/folders/5q/yhcyv3z55wvg6lhgc3h22kk00000gq/T/20240209-3/replication-package/Analysis/Code/Supplementary Survey 3 Analysis.do**
 
 - Line 385, : if $`e'_option1 < 0.001 {
 - Line 386, : global `e'_option1 =  `" `: display %4.2f 0.001'"'
@@ -36,13 +36,13 @@ We found the following set of hard coded numbers. This may be completely legitim
 - Line 894, : if $`e'_option5_2 < 0.001 {
 - Line 895, : global `e'_option5_2 =  `" `: display %4.2f 0.001'"'
 
-**/var/folders/5q/yhcyv3z55wvg6lhgc3h22kk00000gq/T/20240209-1/replication-package/NCP Replication Packet/Analysis/Code/Supplementary Survey 1 Analysis.do**
-
-- Line 248, : if ``emotion'_p_y' < 0.001 {
-- Line 249, : local `emotion'_p_y =  `" `: display %4.2f 0.001'"'
-
-**/var/folders/5q/yhcyv3z55wvg6lhgc3h22kk00000gq/T/20240209-1/replication-package/NCP Replication Packet/Analysis/Code/Supplementary Survey 2 Analysis.do**
+**/var/folders/5q/yhcyv3z55wvg6lhgc3h22kk00000gq/T/20240209-3/replication-package/Analysis/Code/Supplementary Survey 2 Analysis.do**
 
 - Line 423, : if ``emotion'_`type'_p_g' < 0.001 {
 - Line 424, : local `emotion'_`type'_p_g =  `" `: display %4.2f 0.001'"'
+
+**/var/folders/5q/yhcyv3z55wvg6lhgc3h22kk00000gq/T/20240209-3/replication-package/Analysis/Code/Supplementary Survey 1 Analysis.do**
+
+- Line 248, : if ``emotion'_p_y' < 0.001 {
+- Line 249, : local `emotion'_p_y =  `" `: display %4.2f 0.001'"'
 

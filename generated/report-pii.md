@@ -5,8 +5,8 @@
 **Summary:**
 - Data files with PII indicators: 11
 - Variables flagged in data: 27
-- Code files with PII references: 28
-- PII references in code: 1062
+- Code files with PII references: 26
+- PII references in code: 1051
 
 ### Summary of Flagged Files
 
@@ -23,7 +23,6 @@
 | Data | `main.dta` | 2 | gender, loc, location |
 | Data | `pf.csv` | 2 | gender, loc, location |
 | Data | `pf.dta` | 2 | gender, loc, location |
-| Code | `.tex` | 1 | url |
 | Code | `0a-Programs-and-Macros.do` | 15 | lat, name, loc |
 | Code | `1-Summary-Statistics.do` | 73 | lat, gender, loc, location, lon, social |
 | Code | `2-Analysis.do` | 26 | lat, second, loc, lon, social |
@@ -35,7 +34,6 @@
 | Code | `AI-flag-Survey1.do` | 7 | loc, son |
 | Code | `AI-flag-Survey2.do` | 13 | son, loc |
 | Code | `Clean-MTurk.do` | 24 | son, lon, house, school, degree, gender, social |
-| Code | `Clean-Raw.do` | 12 | house, school, degree, gender, loc |
 | Code | `Clean-cs.do` | 29 | name, loc, location, son, lon, social |
 | Code | `Clean-exante.do` | 26 | son, lon, social, name |
 | Code | `Clean-main.do` | 28 | loc, location, son, lon, social, name |
@@ -49,7 +47,7 @@
 | Code | `X_IV-test-for-happiness-satisfaction.do` | 8 | lat, lon, social, loc |
 | Code | `X_Order-effects.do` | 32 | lat, lon, social, loc |
 | Code | `X_PCA.do` | 42 | loc, lat, lon, social, lname, name |
-| Code | `X_Test-OVB.do` | 59 | lon, lat, social, loc |
+| Code | `X_Test-OVB.do` | 61 | lon, lat, social, loc |
 | Code | `comp_OO_CC.do` | 20 | son, lon, social, loc, location, lat |
 
 *See [Appendix](report-pii-appendix.md) for detailed listing of all flagged instances.*

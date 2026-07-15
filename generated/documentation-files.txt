@@ -1,10 +1,6 @@
-/var/folders/5q/yhcyv3z55wvg6lhgc3h22kk00000gq/T/20240209-1/replication-package/NCP Replication Packet/Docs/ApprovalLetter-IRB2021-07-14494.pdf
-/var/folders/5q/yhcyv3z55wvg6lhgc3h22kk00000gq/T/20240209-1/replication-package/NCP Replication Packet/Docs/ApprovalLetter-IRB2024-08-17741.pdf
-/var/folders/5q/yhcyv3z55wvg6lhgc3h22kk00000gq/T/20240209-1/replication-package/NCP Replication Packet/Docs/Experiment Instructions.pdf
-/var/folders/5q/yhcyv3z55wvg6lhgc3h22kk00000gq/T/20240209-1/replication-package/NCP Replication Packet/Docs/Survey Instructions.pdf
-/var/folders/5q/yhcyv3z55wvg6lhgc3h22kk00000gq/T/20240209-1/replication-package/__MACOSX/NCP Replication Packet/Docs/._ApprovalLetter-IRB2021-07-14494.pdf
-/var/folders/5q/yhcyv3z55wvg6lhgc3h22kk00000gq/T/20240209-1/replication-package/__MACOSX/NCP Replication Packet/Docs/._ApprovalLetter-IRB2024-08-17741.pdf
-/var/folders/5q/yhcyv3z55wvg6lhgc3h22kk00000gq/T/20240209-1/replication-package/__MACOSX/NCP Replication Packet/Docs/._Experiment Instructions.pdf
-/var/folders/5q/yhcyv3z55wvg6lhgc3h22kk00000gq/T/20240209-1/replication-package/__MACOSX/NCP Replication Packet/Docs/._Survey Instructions.pdf
-/var/folders/5q/yhcyv3z55wvg6lhgc3h22kk00000gq/T/20240209-1/replication-package/NCP Replication Packet/readME.md
-/var/folders/5q/yhcyv3z55wvg6lhgc3h22kk00000gq/T/20240209-1/replication-package/__MACOSX/NCP Replication Packet/._readME.md
+/var/folders/5q/yhcyv3z55wvg6lhgc3h22kk00000gq/T/20240209-3/replication-package/Docs/ApprovalLetter-IRB2021-07-14494.pdf
+/var/folders/5q/yhcyv3z55wvg6lhgc3h22kk00000gq/T/20240209-3/replication-package/Docs/ApprovalLetter-IRB2024-08-17741.pdf
+/var/folders/5q/yhcyv3z55wvg6lhgc3h22kk00000gq/T/20240209-3/replication-package/Docs/BKT Welfare and the Act of Choosing - paper and appendix.pdf
+/var/folders/5q/yhcyv3z55wvg6lhgc3h22kk00000gq/T/20240209-3/replication-package/Docs/Experiment Instructions.pdf
+/var/folders/5q/yhcyv3z55wvg6lhgc3h22kk00000gq/T/20240209-3/replication-package/Docs/Survey Instructions.pdf
+/var/folders/5q/yhcyv3z55wvg6lhgc3h22kk00000gq/T/20240209-3/replication-package/README.md

@@ -1,4 +1,8 @@
-# Welfare and the Act of Choosing
+# Data and Code for: Welfare and the Act of Choosing
+
+B. Douglas Bernheim, Stanford and NBER\
+Kristy Kim, University of California, Berkeley\
+Dmitry Taubinsky, University of California, Berkeley and NBER
 
 ## Data Availability Statement
 
@@ -15,6 +19,8 @@ To comply with IRB and platform confidentiality requirements, the public replica
 There are no monetary, licensing, or application costs to access the public replication package once it is deposited in the JPE Dataverse.
 
 ## Package Contents
+
+The root of the replication package contains this README file and the `Analysis/` and `Docs/` folders.
 
 The replication package contains the following folders:\
 - `Analysis/`: data, code, intermediate files, and generated outputs for the analysis.\
@@ -44,6 +50,7 @@ The raw files are wide, respondent-level Qualtrics exports after de-identificati
 
 -   `mturkid`: de-identified participant identifier.
 -   `part1`, `part2`, and `part3`: survey modules. `part1` is the Dictator Game (DG), `part2` is the Computer Choice module (CC), and `part3` is the Opt-Out Game (OO).
+-   `arm`: MTurk module-order indicator for the order in which participants viewed the DG and CC modules. `arm = 0` if DG was shown before CC, and `arm = 1` if CC was shown before DG.
 -   `q#`: choice-set number. For example, `q1` refers to choice set 1.
 -   `part1_a#`: participant's choice in DG choice set `#` (`0 = less equitable`, `1 = equitable`). For example, `part1_a1` is the participant's choice in DG choice set 1.
 -   `part3_q#_in#` and `part3_q#_out#`: raw OO choice variables for OO choice set `q#` and opt-out allocation `#`. These are combined during cleaning into a single OO choice variable, where `0 = less equitable`, `1 = equitable`, and `2 = opt-out`.
@@ -61,6 +68,7 @@ The cleaned analysis data in `Analysis/Prepped_Data/` use a more compact structu
 -   `optout_allocation`: DG subgame shown in the OO condition.
 -   `part1_choice`: DG choice for a given choice set (`0 = less equitable`, `1 = equitable`).
 -   `part3_choice`: OO choice for a given choice set (`0 = less equitable`, `1 = equitable`, `2 = opt-out`).
+-   `arm`: MTurk module-order indicator for the order in which participants viewed the DG and CC modules. `arm = 0` if DG was shown before CC, and `arm = 1` if CC was shown before DG.
 -   `present`: indicator for whether CSA ratings refer to the present or future in the present-future treatment.
 
 For `mturk_all_wide_analysis.dta`, CSA ratings are stored in variables such as `guilt_p0`, `guilt_p1`, and `guilt_p2`, where the suffix identifies the option rated (`p0 = less equitable`, `p1 = equitable`, `p2 = opt-out`). The same convention applies to `pride`, `finan`, `fair`, `unfair`, `happy`, and `satis`.
@@ -72,7 +80,7 @@ For `mturk_all_long_analysis.dta`, CSA ratings are stored in variables such as `
 The following table maps the paper's tables and figures to the corresponding file(s) in `Analysis/Output/` and the Stata script that creates them.
 
 | Exhibit    | Output file(s)                                                                                                                                                                                                                                                                                       | Originating code file(s)                                                        |
-|------------------------|------------------------|------------------------|
+|------------|-----------------------------------|------------------------|
 | Figure 1   | `finan_cat_respondent_level.png`; `health_cat_respondent_level.png`; `career_cat_respondent_level.png`                                                                                                                                                                                               | `Supplementary Survey 2 Analysis.do`                                            |
 | Figure 2   | `emotions_finan_mean_plot.png`; `emotions_health_mean_plot.png`; `emotions_career_mean_plot.png`                                                                                                                                                                                                     | `Supplementary Survey 2 Analysis.do`                                            |
 | Figure 4   | `main_sumstat_cs_part1.pdf`; `sumstat_cs_part3.pdf`; `sumstat_part1_part3.pdf`                                                                                                                                                                                                                       | `1-Summary-Statistics.do`                                                       |
@@ -154,6 +162,10 @@ The code was developed on the authors' local Mac environment. No GPU or speciali
 
 A full rerun of the analysis from the master script takes approximately 3 to 4 hours, depending on machine speed. Most of this runtime comes from the bootstrap procedures in the welfare analysis and appendix scripts.
 
+### Controlled randomness
+
+The replication code sets random seeds within the Stata bootstrap calls. The main bootstrap seed is `123450`; additional bootstrap calls use `67890`, `123456`, `12345`, and `123`. These seeds are fixed in the source code.
+
 ## Instructions for Data Analysis
 
 To reproduce the analysis:
@@ -182,7 +194,9 @@ The pre-registration link for the survey analysis is:
 
 -   [OSF pre-registration](https://osf.io/cdgx7/overview?view_only=3c0649d98f6a460eb07f06905e36c98e)
 
-### Additional supporting materials to include before submission
+### Additional supporting materials
+
+-   Paper and Appendices
 
 -   Experiment Instructions
 

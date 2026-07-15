@@ -20,8 +20,11 @@ global lu_calc 			"guilt*_b[rel_guilt]+pride*_b[rel_pride]+finan*_b[rel_finan]+f
 cap program drop prog_clean_data
 program define prog_clean_data, rclass
 	* Open all data
-	use "$prepped_data_dir/mturk_all_wide_analysis_worder.dta", clear
-	keep if inlist(treatment,"main","cs")
+	use "$prepped_data_dir/mturk_all_wide_analysis.dta", clear
+	keep if inlist(treatment,"main","cs") // main treatments
+	
+	* Merge order data
+	merge m:1 mturkid using "$raw_data_dir/mturk_module_order.dta", nogen keep(matched master) 
 
 	** Relative emotions 
 	foreach emotion in $emotions {
@@ -91,7 +94,7 @@ program define prog_logit_ev, rclass
 	* Get opt-in values from three different methods
 	forval c=3/5 {
 		* Infer from logit reg
-		logit optin payout if part==3 & prosocial==2 & optout_all==`c' & oo_first==1 //DG first
+		logit optin payout if part==3 & prosocial==2 & optout_all==`c' & oo_first==1 //OO first
 		return scalar logit1_`c' = _b[_cons]/_b[payout]*-1
 		local logit1 = _b[_cons]/_b[payout]*-1
 		

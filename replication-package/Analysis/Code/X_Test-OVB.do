@@ -124,13 +124,19 @@ logit part1_choice rel_* if part==1 & inlist(treatment,"main","cs"), ///
 scalar l1= e(ll)
 qui logit `e(depvar)' if e(sample)
 scalar l0= e(ll)
-local PR2: di %9.0f 1-(l1/l0)
+local PR2: di %9.2f 1-(l1/l0)
+
 ** Run again to get stored results
 logit part1_choice rel_* if part==1 & inlist(treatment,"main","cs"), ///
 	 vce(cluster mturkid) nocons
-eststo logit: margins, dydx(*) post
+local obs_logit = e(N)
+local group_logit = e(N_clust)
+margins, dydx(*) post
 estadd local cs "No", replace
 estadd scalar r2 = `PR2', replace
+estadd scalar obs = `obs_logit', replace
+estadd scalar group = `group_logit', replace
+eststo logit
 
 * With cs fixed effects
 logit part1_choice rel_* csfe* if part==1 & inlist(treatment,"main","cs"), ///
@@ -139,15 +145,19 @@ logit part1_choice rel_* csfe* if part==1 & inlist(treatment,"main","cs"), ///
 scalar l1= e(ll)
 qui logit `e(depvar)' if e(sample)
 scalar l0= e(ll)
-local PR2: di %9.0f 1-(l1/l0)
+local PR2: di %9.2f 1-(l1/l0)
+
 ** Run again to get stored results
 logit part1_choice rel_* csfe* if part==1 & inlist(treatment,"main","cs"), ///
 	 vce(cluster mturkid) nocons
-eststo logit_fe: margins, dydx(*) post
+local obs_fe = e(N)
+local group_fe = e(N_clust)	
+margins, dydx(*) post
 estadd local cs "Yes", replace
 estadd scalar r2 = `PR2', replace
-local obs = e(N)
-local group = e(N_clust)
+estadd scalar obs = `obs_fe', replace
+estadd scalar group = `group_fe', replace
+eststo logit_fe
 
 * Put in a table
 esttab logit logit_fe using "$output_dir/ivlogit_part1_csfe_short.tex", keep(rel*) /// 

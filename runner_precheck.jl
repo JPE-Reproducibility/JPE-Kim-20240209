@@ -1,6 +1,18 @@
 using YAML
 using PackageScanner
 
+function rm_git(extract_dir)
+    for (root, dirs, files) in walkdir(extract_dir)
+        if ".git" in dirs
+            git_path = joinpath(root, ".git")
+            @info "Removing git repository: $git_path"
+            rm(git_path, recursive=true, force=true)
+            filter!(d -> d != ".git", dirs)
+            return 0
+        end
+    end
+end
+
 # Read configuration
 vars = YAML.load_file(joinpath(ENV["GITHUB_WORKSPACE"], "_variables.yml"))
 @info "Configuration loaded" vars
@@ -8,13 +20,15 @@ vars = YAML.load_file(joinpath(ENV["GITHUB_WORKSPACE"], "_variables.yml"))
 dest_path = joinpath(ENV["GITHUB_WORKSPACE"], "replication-package")
 
 # ── Remote path: download via public Dropbox link ─────────────────────
-url = get(ENV, "DROPBOX_DOWNLOAD_URL", nothing)
+url = let u = get(ENV, "DROPBOX_DOWNLOAD_URL", nothing)
+    (isnothing(u) || isempty(u)) ? nothing : u
+end
 
 downloaded_ok = if !isnothing(url)
     @info "Downloading package from secret Dropbox link..."
     t0 = time()
     try
-        run(`curl -fsSL -o package.zip $url`)
+        run(`curl -fsSL --retry 5 --retry-delay 10 --retry-all-errors --connect-timeout 30 -C - -o package.zip $url`)
         @info "Download complete in $(round(time()-t0, digits=1))s"
         true
     catch e
@@ -83,25 +97,29 @@ if !isdir(dest_path)
 end
 
 # ── PackageScanner precheck ────────────────────────────────────────────
-pkg_size     = vars["package_size_gb"]
-max_pkg_size = vars["package_max_pkg_size_gb"]
-max_file_size = vars["package_max_file_size_gb"]
+if true
+    pkg_size     = vars["package_size_gb"]
+    max_pkg_size = vars["package_max_pkg_size_gb"]
+    max_file_size = vars["package_max_file_size_gb"]
 
-if pkg_size > max_pkg_size
-    @info "Package >$(max_pkg_size) GB — using partial extraction mode"
-    pkg_dir, manifest = PackageScanner.prepare_package_for_precheck(
-        dest_path, size_threshold_gb=max_file_size, interactive=false)
-    PackageScanner.precheck_package(pkg_dir, pre_manifest=manifest,
-                                    no_data_scan=["__MACOSX", "renv"])
-else
-    @info "Unzipping files in $dest_path"
-    try
-        zips = PackageScanner.read_and_unzip_directory(dest_path)
-        @info "Unzipped $(length(zips)) file(s)"
-    catch e
-        @warn "Unzip had issues (may be okay)" exception=e
+    if pkg_size > max_pkg_size
+        @info "Package >$(max_pkg_size) GB — using partial extraction mode"
+        pkg_dir, manifest = PackageScanner.prepare_package_for_precheck(
+            dest_path, size_threshold_gb=max_file_size, interactive=false)
+        PackageScanner.precheck_package(pkg_dir, pre_manifest=manifest,
+                                        no_data_scan=["__MACOSX", "renv"])
+    else
+        @info "Unzipping files in $dest_path"
+        try
+            zips = PackageScanner.read_and_unzip_directory(dest_path)
+            @info "Unzipped $(length(zips)) file(s)"
+        catch e
+            @warn "Unzip had issues (may be okay)" exception=e
+        end
+        @info "Running precheck on $dest_path"
+        PackageScanner.precheck_package(dest_path, no_data_scan=["__MACOSX", "renv"])
+        @info "✓ Precheck complete"
     end
-    @info "Running precheck on $dest_path"
-    PackageScanner.precheck_package(dest_path, no_data_scan=["__MACOSX", "renv"])
-    @info "✓ Precheck complete"
+else
+    @info "run_checks=false — package fetched, skipping PackageScanner precheck"
 end

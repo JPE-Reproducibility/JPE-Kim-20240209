@@ -1,12 +1,12 @@
 ## Appendix: Detailed PII Detection Results
 
-*Generated on 2026-05-04 21:51:13*
+*Generated on 2026-07-15 12:24:06*
 
 This appendix lists all detected instances of potential personally identifiable information (PII) in the project files. Each entry shows the matched PII terms and, for data files, sample values to help verify whether the flagged content is indeed sensitive.
 
 ### Data Files
 
-**/replication-package/NCP Replication Packet/Analysis/Raw_Data/JPE Revision Survey 1 Final.xlsx**
+**/replication-package/Analysis/Raw_Data/JPE Revision Survey 1 Final.xlsx**
 
 - Variable: `durationinseconds`
   - Matched terms: second
@@ -15,7 +15,7 @@ This appendix lists all detected instances of potential personally identifiable 
   - Matched terms: gender
   - Sample values: What is your gender?, Female, Male
 
-**/replication-package/NCP Replication Packet/Analysis/Raw_Data/JPE Revision Survey 2 Final.xlsx**
+**/replication-package/Analysis/Raw_Data/JPE Revision Survey 2 Final.xlsx**
 
 - Variable: `durationinseconds`
   - Matched terms: second
@@ -33,7 +33,7 @@ This appendix lists all detected instances of potential personally identifiable 
   - Matched terms: son
   - Sample values: Please list the main reasons why you may not spend more time making plans to invest in your health., I don’t have the time. My insurance is not good so it’s hard to find providers with coverage. I am scared to know the status of my health., Humans only live so long and after a certain point, natural health declines. Investing into my health is more like sustaining my health. If something goes bad, it's likely not getting better. Correction becomes mitigation; if you start going blind, you can only prolong the inevitable.
 
-**/replication-package/NCP Replication Packet/Analysis/Raw_Data/JPE Revision Survey 3 Final.xlsx**
+**/replication-package/Analysis/Raw_Data/JPE Revision Survey 3 Final.xlsx**
 
 - Variable: `durationinseconds`
   - Matched terms: second
@@ -42,7 +42,7 @@ This appendix lists all detected instances of potential personally identifiable 
   - Matched terms: gender
   - Sample values: What is your gender?, 1, 2
 
-**/replication-package/NCP Replication Packet/Analysis/Raw_Data/cs.csv**
+**/replication-package/Analysis/Raw_Data/cs.csv**
 
 - Variable: `gender`
   - Matched terms: gender
@@ -54,7 +54,7 @@ This appendix lists all detected instances of potential personally identifiable 
   - Matched terms: social
   - Sample values: 0, 1
 
-**/replication-package/NCP Replication Packet/Analysis/Raw_Data/cs.dta**
+**/replication-package/Analysis/Raw_Data/cs.dta**
 
 - Variable: `gender`
   - Matched terms: gender
@@ -66,7 +66,7 @@ This appendix lists all detected instances of potential personally identifiable 
   - Matched terms: social
   - Sample values: 0.0, 1.0
 
-**/replication-package/NCP Replication Packet/Analysis/Raw_Data/exante.csv**
+**/replication-package/Analysis/Raw_Data/exante.csv**
 
 - Variable: `gender`
   - Matched terms: gender
@@ -75,7 +75,7 @@ This appendix lists all detected instances of potential personally identifiable 
   - Matched terms: loc, location
   - Sample values: 3, 4, 5
 
-**/replication-package/NCP Replication Packet/Analysis/Raw_Data/exante.dta**
+**/replication-package/Analysis/Raw_Data/exante.dta**
 
 - Variable: `gender`
   - Matched terms: gender
@@ -84,7 +84,7 @@ This appendix lists all detected instances of potential personally identifiable 
   - Matched terms: loc, location
   - Sample values: 3.0, 4.0, 5.0
 
-**/replication-package/NCP Replication Packet/Analysis/Raw_Data/main.csv**
+**/replication-package/Analysis/Raw_Data/main.csv**
 
 - Variable: `gender`
   - Matched terms: gender
@@ -93,7 +93,7 @@ This appendix lists all detected instances of potential personally identifiable 
   - Matched terms: loc, location
   - Sample values: 4, 5, 3
 
-**/replication-package/NCP Replication Packet/Analysis/Raw_Data/main.dta**
+**/replication-package/Analysis/Raw_Data/main.dta**
 
 - Variable: `gender`
   - Matched terms: gender
@@ -102,7 +102,7 @@ This appendix lists all detected instances of potential personally identifiable 
   - Matched terms: loc, location
   - Sample values: 4.0, 5.0, 3.0
 
-**/replication-package/NCP Replication Packet/Analysis/Raw_Data/pf.csv**
+**/replication-package/Analysis/Raw_Data/pf.csv**
 
 - Variable: `gender`
   - Matched terms: gender
@@ -110,7 +110,7 @@ This appendix lists all detected instances of potential personally identifiable 
 - Variable: `optout_allocation`
   - Matched terms: loc, location
 
-**/replication-package/NCP Replication Packet/Analysis/Raw_Data/pf.dta**
+**/replication-package/Analysis/Raw_Data/pf.dta**
 
 - Variable: `gender`
   - Matched terms: gender
@@ -120,7 +120,7 @@ This appendix lists all detected instances of potential personally identifiable 
 
 ### Code Files
 
-**/replication-package/NCP Replication Packet/Analysis/Build/Clean-MTurk.do**
+**/replication-package/Analysis/Build/Clean-MTurk.do**
 
 - Line 5: son
   ```
@@ -219,58 +219,7 @@ This appendix lists all detected instances of potential personally identifiable 
   save "$prepped_data_dir/mturk_all_long_analysis.dta", replace
   ```
 
-**/replication-package/NCP Replication Packet/Analysis/Build/Clean-Raw.do**
-
-- Line 15: house
-  ```
-  * Household income
-  ```
-- Line 26: school
-  ```
-  label define educ 1 "High school graduate" ///
-  ```
-- Line 28: school
-  ```
-  3 "Vocational / trade / technical school" ///
-  ```
-- Line 29: degree
-  ```
-  4 "Bachelor's degree" ///
-  ```
-- Line 30: degree
-  ```
-  5 "Advanced degree" ///
-  ```
-- Line 32: school
-  ```
-  7 "Less than high school"
-  ```
-- Line 35: gender
-  ```
-  * Gender
-  ```
-- Line 36: gender
-  ```
-  label define gender 1 "Female" 2 "Male" ///
-  ```
-- Line 38: gender
-  ```
-  label val gender gender
-  ```
-- Line 62: loc
-  ```
-  local count=0
-  ```
-- Line 123: loc
-  ```
-  local total=r(max)
-  ```
-- Line 124: loc
-  ```
-  local count=`count'+`total'
-  ```
-
-**/replication-package/NCP Replication Packet/Analysis/Build/Clean-cs.do**
+**/replication-package/Analysis/Build/Clean-cs.do**
 
 - Line 7: name
   ```
@@ -389,7 +338,7 @@ This appendix lists all detected instances of potential personally identifiable 
   rename rating`emotion'2 `emotion'_p2
   ```
 
-**/replication-package/NCP Replication Packet/Analysis/Build/Clean-exante.do**
+**/replication-package/Analysis/Build/Clean-exante.do**
 
 - Line 28: son
   ```
@@ -496,7 +445,7 @@ This appendix lists all detected instances of potential personally identifiable 
   rename rating`emotion'2 `emotion'_p2
   ```
 
-**/replication-package/NCP Replication Packet/Analysis/Build/Clean-main.do**
+**/replication-package/Analysis/Build/Clean-main.do**
 
 - Line 32: loc, location
   ```
@@ -611,7 +560,7 @@ This appendix lists all detected instances of potential personally identifiable 
   rename rating`emotion'2 `emotion'_p2
   ```
 
-**/replication-package/NCP Replication Packet/Analysis/Build/Clean-pf.do**
+**/replication-package/Analysis/Build/Clean-pf.do**
 
 - Line 36: son
   ```
@@ -706,7 +655,7 @@ This appendix lists all detected instances of potential personally identifiable 
   rename rating`emotion'0 `emotion'_p0
   ```
 
-**/replication-package/NCP Replication Packet/Analysis/Code/0a-Programs-and-Macros.do**
+**/replication-package/Analysis/Code/0a-Programs-and-Macros.do**
 
 - Line 34: lat
   ```
@@ -769,7 +718,7 @@ This appendix lists all detected instances of potential personally identifiable 
   rename v2 upper
   ```
 
-**/replication-package/NCP Replication Packet/Analysis/Code/1-Summary-Statistics.do**
+**/replication-package/Analysis/Code/1-Summary-Statistics.do**
 
 - Line 16: lat
   ```
@@ -1064,7 +1013,7 @@ This appendix lists all detected instances of potential personally identifiable 
   (sc `emotion' graph_choice if prosocial==2, mcolor(cranberry)), ///
   ```
 
-**/replication-package/NCP Replication Packet/Analysis/Code/2-Analysis.do**
+**/replication-package/Analysis/Code/2-Analysis.do**
 
 - Line 18: lat
   ```
@@ -1171,7 +1120,7 @@ This appendix lists all detected instances of potential personally identifiable 
   local group = e(N_clust)
   ```
 
-**/replication-package/NCP Replication Packet/Analysis/Code/3-Robustness.do**
+**/replication-package/Analysis/Code/3-Robustness.do**
 
 - Line 31: lat
   ```
@@ -1210,7 +1159,7 @@ This appendix lists all detected instances of potential personally identifiable 
   label variable Corr "Present-Future Correlation"
   ```
 
-**/replication-package/NCP Replication Packet/Analysis/Code/4-All-Welfare-Analysis-Bootstrap-CombinedHS.do**
+**/replication-package/Analysis/Code/4-All-Welfare-Analysis-Bootstrap-CombinedHS.do**
 
 - Line 15: loc
   ```
@@ -2113,7 +2062,7 @@ This appendix lists all detected instances of potential personally identifiable 
   (sc coef graph_order if prosocial==0 & sample=="all", mcolor(orange)), ///
   ```
 
-**/replication-package/NCP Replication Packet/Analysis/Code/5-Compare-DG-utilities.do**
+**/replication-package/Analysis/Code/5-Compare-DG-utilities.do**
 
 - Line 28: lat
   ```
@@ -2220,7 +2169,7 @@ This appendix lists all detected instances of potential personally identifiable 
   local group = e(N_clust)
   ```
 
-**/replication-package/NCP Replication Packet/Analysis/Code/6-Stability-DG-Weights.do**
+**/replication-package/Analysis/Code/6-Stability-DG-Weights.do**
 
 - Line 18: lon
   ```
@@ -2375,7 +2324,7 @@ This appendix lists all detected instances of potential personally identifiable 
   binscatter pr_oo2 pred if part==3 & prosocial==2, ///
   ```
 
-**/replication-package/NCP Replication Packet/Analysis/Code/7-Stability-DG-Weights-2.do**
+**/replication-package/Analysis/Code/7-Stability-DG-Weights-2.do**
 
 - Line 29: social
   ```
@@ -2438,7 +2387,7 @@ This appendix lists all detected instances of potential personally identifiable 
   replace payoff=2.5 if choice_set==7 & part==2 & prosocial==0
   ```
 
-**/replication-package/NCP Replication Packet/Analysis/Code/AI-flag-Survey1.do**
+**/replication-package/Analysis/Code/AI-flag-Survey1.do**
 
 - Line 14: loc
   ```
@@ -2469,7 +2418,7 @@ This appendix lists all detected instances of potential personally identifiable 
   drop personal
   ```
 
-**/replication-package/NCP Replication Packet/Analysis/Code/AI-flag-Survey2.do**
+**/replication-package/Analysis/Code/AI-flag-Survey2.do**
 
 - Line 3: son
   ```
@@ -2524,7 +2473,7 @@ This appendix lists all detected instances of potential personally identifiable 
   gen character_flag=strlen(p1_health_reason)+strlen(p1_career_reason)+strlen(p1_finan_reason)>=350
   ```
 
-**/replication-package/NCP Replication Packet/Analysis/Code/Heterogeneous-MU.do**
+**/replication-package/Analysis/Code/Heterogeneous-MU.do**
 
 - Line 46: lat
   ```
@@ -2679,7 +2628,7 @@ This appendix lists all detected instances of potential personally identifiable 
   latex_write mixedhi `mixedhi' numbers_pipe
   ```
 
-**/replication-package/NCP Replication Packet/Analysis/Code/Supplementary Survey 1 Analysis.do**
+**/replication-package/Analysis/Code/Supplementary Survey 1 Analysis.do**
 
 - Line 21: second
   ```
@@ -2922,7 +2871,7 @@ This appendix lists all detected instances of potential personally identifiable 
   latex_write choice`suff'yes `choice`suff'yes' survey_numbers
   ```
 
-**/replication-package/NCP Replication Packet/Analysis/Code/Supplementary Survey 2 Analysis.do**
+**/replication-package/Analysis/Code/Supplementary Survey 2 Analysis.do**
 
 - Line 20: second
   ```
@@ -3165,7 +3114,7 @@ This appendix lists all detected instances of potential personally identifiable 
   local legend2 "Gov. Mandated Everyone Sign Up for Program"
   ```
 
-**/replication-package/NCP Replication Packet/Analysis/Code/Supplementary Survey 3 Analysis.do**
+**/replication-package/Analysis/Code/Supplementary Survey 3 Analysis.do**
 
 - Line 23: lat
   ```
@@ -3500,7 +3449,7 @@ This appendix lists all detected instances of potential personally identifiable 
   local `e'_psym_5 = "<"
   ```
 
-**/replication-package/NCP Replication Packet/Analysis/Code/Welfare-values.do**
+**/replication-package/Analysis/Code/Welfare-values.do**
 
 - Line 21: lon
   ```
@@ -3751,7 +3700,7 @@ This appendix lists all detected instances of potential personally identifiable 
   latex_write coefdgehi `coefdgehi' numbers_pipe
   ```
 
-**/replication-package/NCP Replication Packet/Analysis/Code/X_DG-vs-OO-Weights.do**
+**/replication-package/Analysis/Code/X_DG-vs-OO-Weights.do**
 
 - Line 12: lon
   ```
@@ -3786,7 +3735,7 @@ This appendix lists all detected instances of potential personally identifiable 
   1 "Prosocial Constant" 2 "Opt-Out Constant")  ///
   ```
 
-**/replication-package/NCP Replication Packet/Analysis/Code/X_IV-test-for-happiness-satisfaction.do**
+**/replication-package/Analysis/Code/X_IV-test-for-happiness-satisfaction.do**
 
 - Line 31: lat
   ```
@@ -3821,138 +3770,138 @@ This appendix lists all detected instances of potential personally identifiable 
   local instruments rel_guilt rel_pride rel_finan rel_fair rel_unfair
   ```
 
-**/replication-package/NCP Replication Packet/Analysis/Code/X_Order-effects.do**
+**/replication-package/Analysis/Code/X_Order-effects.do**
 
-- Line 26: lat
+- Line 29: lat
   ```
   ** Relative emotions
   ```
-- Line 32: lon
+- Line 35: lon
   ```
   reshape long guilt pride finan fair unfair happy satis, ///
   ```
-- Line 33: social
+- Line 36: social
   ```
   i(mturkid choice_set part present) j(prosocial) string
   ```
-- Line 34: social
+- Line 37: social
   ```
   replace prosocial="1" if prosocial=="_p1"
   ```
-- Line 35: social
+- Line 38: social
   ```
   replace prosocial="0" if prosocial=="_p0"
   ```
-- Line 36: social
+- Line 39: social
   ```
   replace prosocial="2" if prosocial=="_p2"
   ```
-- Line 37: social
+- Line 40: social
   ```
   destring prosocial, force replace
   ```
-- Line 40: social
+- Line 43: social
   ```
   gen payoff=4 if choice_set==4 & part==2 & prosocial==0
   ```
-- Line 41: social
+- Line 44: social
   ```
   replace payoff=3.5 if choice_set==5 & part==2 & prosocial==0
   ```
-- Line 42: social
+- Line 45: social
   ```
   replace payoff=3 if choice_set==6 & part==2 & prosocial==0
   ```
-- Line 43: social
+- Line 46: social
   ```
   replace payoff=2.5 if choice_set==7 & part==2 & prosocial==0
   ```
-- Line 50: lon
+- Line 53: lon
   ```
   cap program drop prog_lu_mmu_long
   ```
-- Line 51: lon
+- Line 54: lon
   ```
   program define prog_lu_mmu_long
   ```
-- Line 53: lat
+- Line 56: lat
   ```
   * Get reg coefficients for relative weights of each emotion
   ```
-- Line 59: lat
+- Line 62: lat
   ```
   * Now reg latent utility on the payoff and get mmu
   ```
-- Line 64: social
+- Line 67: social
   ```
   sum mmu if part==2 & choice_set==4 & prosocial==0 & treatment=="main"
   ```
-- Line 66: social
+- Line 69: social
   ```
   gen temp=mmu if part==2 & choice_set==4 & prosocial==0 & treatment=="main"
   ```
-- Line 80: lon
+- Line 83: lon
   ```
   qui prog_lu_mmu_long
   ```
-- Line 94: social
+- Line 97: social
   ```
-  logit optin payout if part==3 & prosocial==2 & optout_all==`c' & oo_first==1 //DG first
+  logit optin payout if part==3 & prosocial==2 & optout_all==`c' & oo_first==1 //OO first
   ```
-- Line 96: loc
+- Line 99: loc
   ```
   local logit1 = _b[_cons]/_b[payout]*-1
   ```
-- Line 99: social
+- Line 102: social
   ```
   sum mmu if part==1 & prosocial==part1_choice & choice_set==`c' & dg_first==1 // DG first
   ```
-- Line 101: loc
+- Line 104: loc
   ```
   local ev1_`c' = r(mean)
   ```
-- Line 123: lon
+- Line 126: lon
   ```
   prog_lu_mmu_long "& arm==1"
   ```
-- Line 130: social
+- Line 133: social
   ```
   replace pred=1-pred if (part==1 | part==2) & prosocial==0
   ```
-- Line 137: lon
+- Line 140: lon
   ```
   prog_lu_mmu_long  "& arm==0"
   ```
-- Line 144: social
+- Line 147: social
   ```
   replace pred2=1-pred2 if (part==1 | part==2) & prosocial==0
   ```
-- Line 151: social
+- Line 154: social
   ```
   reg part1_choice pred if part==1 & prosocial==1 & arm==0
   ```
-- Line 152: loc
+- Line 155: loc
   ```
   local eq = `"`: display %4.2f _b[pred]'"'
   ```
-- Line 154: social
+- Line 157: social
   ```
   binscatter part1_choice pred if part==1 & prosocial==1 & arm==0, ///
   ```
-- Line 163: social
+- Line 166: social
   ```
   reg part1_choice pred2 if part==1 & prosocial==1 & arm==1
   ```
-- Line 164: loc
+- Line 167: loc
   ```
   local eq = `"`: display %4.2f _b[pred2]'"'
   ```
-- Line 166: social
+- Line 169: social
   ```
   binscatter part1_choice pred2 if part==1 & prosocial==1 & arm==1, ///
   ```
 
-**/replication-package/NCP Replication Packet/Analysis/Code/X_PCA.do**
+**/replication-package/Analysis/Code/X_PCA.do**
 
 - Line 12: loc
   ```
@@ -4123,7 +4072,7 @@ This appendix lists all detected instances of potential personally identifiable 
   (sc coef graph_order if prosocial==0 & sample=="PCA", mcolor(midgreen%40) m(T)), ///
   ```
 
-**/replication-package/NCP Replication Packet/Analysis/Code/X_Test-OVB.do**
+**/replication-package/Analysis/Code/X_Test-OVB.do**
 
 - Line 17: lon
   ```
@@ -4215,154 +4164,162 @@ This appendix lists all detected instances of potential personally identifiable 
   ```
 - Line 127: loc
   ```
-  local PR2: di %9.0f 1-(l1/l0)
+  local PR2: di %9.2f 1-(l1/l0)
   ```
 - Line 132: loc
   ```
+  local obs_logit = e(N)
+  ```
+- Line 133: loc
+  ```
+  local group_logit = e(N_clust)
+  ```
+- Line 135: loc
+  ```
   estadd local cs "No", replace
   ```
-- Line 142: loc
+- Line 148: loc
   ```
-  local PR2: di %9.0f 1-(l1/l0)
+  local PR2: di %9.2f 1-(l1/l0)
   ```
-- Line 147: loc
+- Line 153: loc
+  ```
+  local obs_fe = e(N)
+  ```
+- Line 154: loc
+  ```
+  local group_fe = e(N_clust)
+  ```
+- Line 156: loc
   ```
   estadd local cs "Yes", replace
   ```
-- Line 149: loc
-  ```
-  local obs = e(N)
-  ```
-- Line 150: loc
-  ```
-  local group = e(N_clust)
-  ```
-- Line 172: lat
+- Line 182: lat
   ```
   * Get reg coefficients for relative weights of each emotion
   ```
-- Line 179: social
+- Line 189: social
   ```
   keep mturkid part choice_set prosocial $emotions lu csfe*
   ```
-- Line 180: social
+- Line 190: social
   ```
   reshape wide $emotions lu, i(mturkid part choice_set csfe*) j(prosocial)
   ```
-- Line 187: loc
+- Line 197: loc
   ```
   local pr2=round(e(r2_a),0.01)
   ```
-- Line 189: lat
+- Line 199: lat
   ```
   latex_write csfers `pr2' numbers_pipe
   ```
-- Line 190: loc
+- Line 200: loc
   ```
   local obs = e(N)
   ```
-- Line 191: loc
+- Line 201: loc
   ```
   local group = e(N_clust)
   ```
-- Line 224: lon
+- Line 234: lon
   ```
   reps(1000) seed(123450) cluster(mturkid) nodrop: prog_util prog_lu_mmu_long
   ```
-- Line 230: social
+- Line 240: social
   ```
   gen prosocial = mod(n,2)
   ```
-- Line 254: lon
+- Line 264: lon
   ```
   reps(1000) seed(123450) cluster(mturkid) nodrop: prog_util prog_lu_mmu_long_fe
   ```
-- Line 260: social
+- Line 270: social
   ```
   gen prosocial = mod(n,2)
   ```
-- Line 271: social
+- Line 281: social
   ```
   tw (rspike upper lower graph_order if prosocial==1 & fe==0, lcolor(ebblue)) ///
   ```
-- Line 272: social
+- Line 282: social
   ```
   (sc coef graph_order if prosocial==1 & fe==0, mcolor(ebblue)) ///
   ```
-- Line 273: social
+- Line 283: social
   ```
   (rspike  upper lower graph_order if prosocial==0 & fe==0, lcolor(orange)) ///
   ```
-- Line 274: social
+- Line 284: social
   ```
   (sc coef graph_order if prosocial==0 & fe==0, mcolor(orange)) ///
   ```
-- Line 275: social
+- Line 285: social
   ```
   (rspike upper lower graph_order if prosocial==1 & fe==1, lcolor(ebblue%40)) ///
   ```
-- Line 276: social
+- Line 286: social
   ```
   (sc coef graph_order if prosocial==1 & fe==1, mcolor(ebblue%40) m(T)) ///
   ```
-- Line 277: social
+- Line 287: social
   ```
   (rspike  upper lower graph_order if prosocial==0 & fe==1, lcolor(orange%40)) ///
   ```
-- Line 278: social
+- Line 288: social
   ```
   (sc coef graph_order if prosocial==0 & fe==1, mcolor(orange%40) m(T)), ///
   ```
-- Line 299: lon
+- Line 309: lon
   ```
   reps(1000) seed(123450) cluster(mturkid) nodrop: prog_util prog_lu_mmu_long
   ```
-- Line 305: social
+- Line 315: social
   ```
   gen prosocial = mod(n,2)
   ```
-- Line 329: lon
+- Line 339: lon
   ```
   reps(1000) seed(123450) cluster(mturkid) nodrop: prog_util prog_lu_mmu_long_fe
   ```
-- Line 335: social
+- Line 345: social
   ```
   gen prosocial = mod(n,2)
   ```
-- Line 347: social
+- Line 357: social
   ```
   tw (rspike upper lower graph_order if prosocial==1 & fe==0, lcolor(ebblue)) ///
   ```
-- Line 348: social
+- Line 358: social
   ```
   (sc coef graph_order if prosocial==1 & fe==0, mcolor(ebblue)) ///
   ```
-- Line 349: social
+- Line 359: social
   ```
   (rspike  upper lower graph_order if prosocial==0 & fe==0, lcolor(orange)) ///
   ```
-- Line 350: social
+- Line 360: social
   ```
   (sc coef graph_order if prosocial==0 & fe==0, mcolor(orange)) ///
   ```
-- Line 351: social
+- Line 361: social
   ```
   (rspike upper lower graph_order if prosocial==1 & fe==1, lcolor(ebblue%40)) ///
   ```
-- Line 352: social
+- Line 362: social
   ```
   (sc coef graph_order if prosocial==1 & fe==1, mcolor(ebblue%40) m(T)) ///
   ```
-- Line 353: social
+- Line 363: social
   ```
   (rspike  upper lower graph_order if prosocial==0 & fe==1, lcolor(orange%40)) ///
   ```
-- Line 354: social
+- Line 364: social
   ```
   (sc coef graph_order if prosocial==0 & fe==1, mcolor(orange%40) m(T)), ///
   ```
 
-**/replication-package/NCP Replication Packet/Analysis/Code/comp_OO_CC.do**
+**/replication-package/Analysis/Code/comp_OO_CC.do**
 
 - Line 5: son
   ```
@@ -4443,12 +4400,5 @@ This appendix lists all detected instances of potential personally identifiable 
 - Line 87: lat
   ```
   latex_write mainthreenotgive `mainthreenotgive' survey_numbers
-  ```
-
-**/replication-package/NCP Replication Packet/Analysis/Output/.tex**
-
-- Line 1: url
-  ```
-  \newcommand{\newcommand{\newcommand{\newcommand{\newcommand{\newcommand{\newcommand{\newcommand{\new
   ```
 
